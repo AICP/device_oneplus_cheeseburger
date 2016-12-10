@@ -23,6 +23,7 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 #define BTM_DEF_LOCAL_NAME   "OnePlus 5"
+#define BTA_DISABLE_DELAY 1000 /* in milliseconds */
 // Disables read remote device feature
 #define BTA_SKIP_BLE_READ_REMOTE_FEAT FALSE
 #define MAX_ACL_CONNECTIONS    7
