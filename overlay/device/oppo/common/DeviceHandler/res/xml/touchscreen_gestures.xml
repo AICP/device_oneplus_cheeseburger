@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<touchscreen-gestures xmlns:slim="http://schemas.android.com/apk/res-auto">
+    <gesture
+        slim:name="@string/gesture_arrow_down_title"
+        slim:path="/proc/touchpanel/down_arrow_enable"
+        slim:scancode="252"
+        slim:defaultAction="**ring_vib_silent**" />
+    <gesture
+        slim:name="@string/gesture_arrow_left_title"
+        slim:path="/proc/touchpanel/left_arrow_enable"
+        slim:scancode="253"
+        slim:defaultAction="**media_previous**" />
+    <gesture
+        slim:name="@string/gesture_arrow_right_title"
+        slim:path="/proc/touchpanel/right_arrow_enable"
+        slim:scancode="254"
+        slim:defaultAction="**media_next**" />
+    <gesture
+        slim:name="@string/gesture_arrow_up_title"
+        slim:path="/proc/touchpanel/up_arrow_enable"
+        slim:scancode="255"
+        slim:defaultAction="**torch**" />
+    <gesture
+        slim:name="@string/gesture_double_swipe_title"
+        slim:path="/proc/touchpanel/double_swipe_enable"
+        slim:scancode="251"
+        slim:defaultAction="**media_play_pause**" />
+    <gesture
+        slim:name="@string/gesture_up_swipe_title"
+        slim:path="/proc/touchpanel/up_swipe_enable"
+        slim:scancode="66"
+        slim:defaultAction="**null**" />
+    <gesture
+        slim:name="@string/gesture_down_swipe_title"
+        slim:path="/proc/touchpanel/down_swipe_enable"
+        slim:scancode="65"
+        slim:defaultAction="**null**" />
+    <gesture
+        slim:name="@string/gesture_left_swipe_title"
+        slim:path="/proc/touchpanel/left_swipe_enable"
+        slim:scancode="64"
+        slim:defaultAction="**null**" />
+    <gesture
+        slim:name="@string/gesture_right_swipe_title"
+        slim:path="/proc/touchpanel/right_swipe_enable"
+        slim:scancode="63"
+        slim:defaultAction="**null**" />
+    <gesture
+        slim:name="@string/gesture_circle_title"
+        slim:path="/proc/touchpanel/letter_o_enable"
+        slim:scancode="250"
+        slim:defaultAction="**camera**" />
+</touchscreen-gestures>
