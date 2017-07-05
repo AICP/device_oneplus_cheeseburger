@@ -2,5 +2,6 @@ allow init vfat:file { read open };
 allow init socket_device:sock_file { create setattr unlink };
 allow init debugfs:file write;
 allow init proc_touchpanel:file write;
+allow init firmware_file:dir r_file_perms;
 
 domain_trans(init, rootfs, dashd)
