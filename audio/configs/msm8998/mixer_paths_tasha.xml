@@ -689,7 +689,7 @@
     </path>
 <!--#endif-->
     <path name="deep-buffer-playback receiver">
-        <path name="deep-buffer-playback speaker" />
+        <path name="deep-buffer-playback" />
     </path>
 
     <path name="deep-buffer-playback speaker-protected">
@@ -764,7 +764,7 @@
     </path>
 <!--#endif-->
     <path name="low-latency-playback receiver">
-        <path name="low-latency-playback speaker" />
+        <path name="low-latency-playback" />
     </path>
 
     <path name="low-latency-playback speaker-protected">
@@ -839,7 +839,7 @@
     </path>
 <!--#endif-->
     <path name="audio-ull-playback receiver">
-        <path name="audio-ull-playback speaker" />
+        <path name="audio-ull-playback" />
     </path>
 
     <path name="audio-ull-playback speaker-protected">
@@ -921,7 +921,7 @@
     </path>
 <!--#endif-->
     <path name="compress-offload-playback receiver">
-        <path name="compress-offload-playback speaker" />
+        <path name="compress-offload-playback" />
     </path>
 
     <path name="compress-offload-playback speaker-protected">
@@ -1008,7 +1008,7 @@
     </path>
 <!--#endif-->
     <path name="compress-offload-playback2 receiver">
-        <path name="compress-offload-playback2 speaker" />
+        <path name="compress-offload-playback2" />
     </path>
 
     <path name="compress-offload-playback2 hdmi">
@@ -1083,7 +1083,7 @@
     </path>
 <!--#endif-->
     <path name="compress-offload-playback3 receiver">
-        <path name="compress-offload-playback3 speaker" />
+        <path name="compress-offload-playback3" />
     </path>
 
     <path name="compress-offload-playback3 hdmi">
@@ -1152,13 +1152,13 @@
         <ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia11" value="1" />
     </path>
 <!-- #ifdef VENDOR_EDIT -->
-<!-- wangdongdong@MultiMediaService,2016/10/01,add i2s path-->	
+<!-- wangdongdong@MultiMediaService,2016/10/01,add i2s path-->
     <path name="compress-offload-playback4 speaker">
         <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia11" value="1" />
     </path>
 <!--#endif-->
     <path name="compress-offload-playback4 receiver">
-        <path name="compress-offload-playback4 speaker" />
+        <path name="compress-offload-playback4" />
     </path>
 
     <path name="compress-offload-playback4 hdmi">
@@ -1228,7 +1228,7 @@
     </path>
 <!--#endif-->
     <path name="compress-offload-playback5 receiver">
-        <path name="compress-offload-playback5 speaker" />
+        <path name="compress-offload-playback5" />
     </path>
 
     <path name="compress-offload-playback5 hdmi">
@@ -1297,13 +1297,13 @@
         <ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia13" value="1" />
     </path>
 <!-- #ifdef VENDOR_EDIT -->
-<!-- wangdongdong@MultiMediaService,2016/10/01,add i2s path-->	
+<!-- wangdongdong@MultiMediaService,2016/10/01,add i2s path-->
     <path name="compress-offload-playback6 speaker">
         <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia13" value="1" />
     </path>
 <!--#endif-->
     <path name="compress-offload-playback6 receiver">
-        <path name="compress-offload-playback6 speaker" />
+        <path name="compress-offload-playback6" />
     </path>
 
     <path name="compress-offload-playback6 hdmi">
@@ -1378,7 +1378,7 @@
     </path>
 <!--#endif-->
     <path name="compress-offload-playback7 receiver">
-        <path name="compress-offload-playback7 speaker" />
+        <path name="compress-offload-playback7" />
     </path>
 
     <path name="compress-offload-playback7 hdmi">
@@ -1447,13 +1447,13 @@
         <ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia15" value="1" />
     </path>
 <!-- #ifdef VENDOR_EDIT -->
-<!-- wangdongdong@MultiMediaService,2016/10/01,add i2s path-->	
+<!-- wangdongdong@MultiMediaService,2016/10/01,add i2s path-->
     <path name="compress-offload-playback8 speaker">
         <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia15" value="1" />
     </path>
 <!--#endif-->
     <path name="compress-offload-playback8 receiver">
-        <path name="compress-offload-playback8 speaker" />
+        <path name="compress-offload-playback8" />
     </path>
 
     <path name="compress-offload-playback8 hdmi">
@@ -1528,7 +1528,7 @@
     </path>
 <!--#endif-->
     <path name="compress-offload-playback9 receiver">
-        <path name="compress-offload-playback9 speaker" />
+        <path name="compress-offload-playback9" />
     </path>
 
     <path name="compress-offload-playback9 hdmi">
@@ -1827,8 +1827,7 @@
     </path>
 
     <path name="compress-voip-call receiver">
-        <ctl name="QUAT_MI2S_RX_Voice Mixer Voip" value="1" />
-        <ctl name="Voip_Tx Mixer SLIM_0_TX_Voip" value="1" />
+        <path name="compress-voip-call" />
     </path>
 
 <!-- #ifdef VENDOR_EDIT -->
@@ -1958,8 +1957,7 @@
     </path>
 <!--#endif-->
     <path name="voicemmode1-call receiver">
-        <ctl name="QUAT_MI2S_RX_Voice Mixer VoiceMMode1" value="1" />
-        <ctl name="VoiceMMode1_Tx Mixer SLIM_0_TX_MMode1" value="1" />
+        <path name="voicemmode1-call" />
     </path>
 
     <path name="voicemmode1-call headphones">
@@ -2013,7 +2011,7 @@
     </path>
 
 <!-- #ifdef VENDOR_EDIT -->
-<!-- wangdongdong@MultiMediaService,2016/10/01,add i2s path-->	
+<!-- wangdongdong@MultiMediaService,2016/10/01,add i2s path-->
     <path name="voicemmode2-call speaker">
         <ctl name="VOC_EXT_EC MUX" value="QUAT_MI2S_TX" />
         <ctl name="QUAT_MI2S_RX_Voice Mixer VoiceMMode2" value="1" />
@@ -2021,8 +2019,7 @@
     </path>
 <!--#endif-->
     <path name="voicemmode2-call receiver">
-        <ctl name="QUAT_MI2S_RX_Voice Mixer VoiceMMode2" value="1" />
-        <ctl name="VoiceMMode2_Tx Mixer SLIM_0_TX_MMode2" value="1" />
+        <path name="voicemmode2-call" />
     </path>
 
     <path name="voicemmode2-call headphones">
