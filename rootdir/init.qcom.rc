@@ -40,7 +40,7 @@ on init
 
     # Create cgroup mount point for memory
     mkdir /sys/fs/cgroup/memory/bg 0750 root system
-    write /sys/fs/cgroup/memory/bg/memory.swappiness 140
+    write /sys/fs/cgroup/memory/bg/memory.swappiness 120
     write /sys/fs/cgroup/memory/bg/memory.move_charge_at_immigrate 1
     chown root system /sys/fs/cgroup/memory/bg/tasks
     chmod 0660 /sys/fs/cgroup/memory/bg/tasks
@@ -52,10 +52,10 @@ on late-fs
     # boot time fs tune
     write /sys/block/sda/queue/iostats 0
     write /sys/block/sda/queue/iosched/slice_idle 0
-    write /sys/block/sda/queue/read_ahead_kb 2048
-    write /sys/block/sda/queue/nr_requests 256
-    write /sys/block/dm-0/queue/read_ahead_kb 2048
-    write /sys/block/dm-1/queue/read_ahead_kb 2048
+    write /sys/block/sda/queue/read_ahead_kb 4096
+    write /sys/block/sda/queue/nr_requests 512
+    write /sys/block/dm-0/queue/read_ahead_kb 4096
+    write /sys/block/dm-1/queue/read_ahead_kb 4096
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
@@ -409,11 +409,11 @@ on property:persist.sys.ssr.enable_ramdumps=0
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
     # end boot time fs tune
-    write /sys/block/sda/queue/read_ahead_kb 128
-    write /sys/block/sda/queue/nr_requests 128
-    write /sys/block/dm-0/queue/read_ahead_kb 128
-    write /sys/block/dm-1/queue/read_ahead_kb 128
-    write /sys/block/sda/queue/iostats 1
+    write /sys/block/sda/queue/read_ahead_kb 2048
+    write /sys/block/sda/queue/nr_requests 256
+    write /sys/block/dm-0/queue/read_ahead_kb 2048
+    write /sys/block/dm-1/queue/read_ahead_kb 2048
+    write /sys/block/sda/queue/iostats 0
     #WDSP FW boot sysfs node used by STHAL
     chown media audio /sys/kernel/wdsp0/boot
 
