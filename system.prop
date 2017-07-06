@@ -80,7 +80,7 @@ persist.data.mode=concurrent
 drm.service.enabled=true
 
 # FRP
-ro.frp.pst=/dev/block/bootdevice/by-name/config
+# ro.frp.pst=/dev/block/bootdevice/by-name/config
 
 # Graphics
 ro.sf.lcd_density=480
