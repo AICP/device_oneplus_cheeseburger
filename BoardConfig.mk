@@ -65,7 +65,19 @@ TARGET_USES_UEFI := true
 TARGET_USES_64_BIT_BINDER := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 swiotlb=2048
+
+BOARD_KERNEL_CMDLINE := \
+        androidboot.hardware=qcom \
+        ehci-hcd.park=3 \
+        lpm_levels.sleep_disabled=1 \
+        sched_enable_hmp=1 \
+        sched_enable_power_aware=1 \
+        service_locator.enable=1 \
+        swiotlb=2048 \
+    androidboot.usbcontroller=a800000.dwc3 \
+    androidboot.selinux=permissive \
+    androidboot.verifiedbootstate=green \
+    androidboot.veritymode=enforcing
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
@@ -77,6 +89,7 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/oneplus/msm8998
 TARGET_KERNEL_CONFIG := cheeseburger_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+TARGET_KERNEL_BUILD_VARIANT := user
 
 # Enable real time lockscreen charging current values
 BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
