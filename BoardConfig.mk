@@ -74,6 +74,7 @@ BOARD_KERNEL_CMDLINE := \
 	sched_enable_power_aware=1 \
 	service_locator.enable=1 \
 	swiotlb=2048 \
+    androidboot.usbcontroller=a800000.dwc3 \
     androidboot.selinux=permissive \
     androidboot.verifiedbootstate=green \
     androidboot.veritymode=enforcing
