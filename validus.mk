@@ -23,6 +23,7 @@ $(call inherit-product, device/oneplus/cheeseburger/device.mk)
 
 # Inherit some common Validus stuff.
 $(call inherit-product, vendor/validus/config/common_full_phone.mk)
+$(call inherit-product, vendor/validus/config/caf_fw.mk)
 
 PRODUCT_NAME := validus_cheeseburger
 PRODUCT_DEVICE := cheeseburger
