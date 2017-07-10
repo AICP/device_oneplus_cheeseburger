@@ -1,4 +1,3 @@
-Copyright (C) 2017 - The MoKee Open Source Project<br>
 Copyright (C) 2017 - The LineageOS Project
 
 Device configuration for OnePlus 5
