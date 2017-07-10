@@ -18,7 +18,7 @@
 
 package org.mokee.hardware;
 
-import org.mokee.internal.util.FileUtils;
+import org.cyanogenmod.internal.util.FileUtils;
 
 import android.util.Log;
 
