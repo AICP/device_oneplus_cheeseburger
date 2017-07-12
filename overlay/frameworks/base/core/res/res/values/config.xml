@@ -81,7 +81,7 @@
     <!--bool name="config_multiColorNotificationLed">true</bool-->
 
     <!-- Do the battery/notification LEDs support pulsing? Used to decide if we show pulse settings -->
-    <!--bool name="config_ledCanPulse">true</bool-->
+    <!--bool name="config_ledCanPulse">true</bool-->oppo
 
     <!-- Vibrator pattern for feedback about a long screen/key press -->
     <integer-array name="config_longPressVibePattern">
@@ -435,6 +435,9 @@
          based on screen size and total memory for the largest lowmemorykiller bucket, and
          scaled proportionally to the smaller buckets.  -1 keeps the default. -->
     <integer name="config_lowMemoryKillerMinFreeKbytesAbsolute">409600</integer>
+
+    <!-- Indicate that this device has Dash Charger -->
+	<bool name="config_hasDashCharger">true</bool>
 
     <!-- Device configuration setting the /proc/sys/vm/extra_free_kbytes tunable in the kernel
          (if it exists).  A high value will increase the amount of memory that the kernel
