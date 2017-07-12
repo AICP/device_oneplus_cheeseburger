@@ -28,6 +28,11 @@
     "repository":  "SlimRoms/vendor_nxp-nfc_opensource_Nfc",
     "target_path": "vendor/nxp-nfc/opensource/Nfc",
     "branch":      "ng7.1"
+  },
+  {
+   "repository":  "LineageOS/android_packages_resources_devicesettings",
+    "target_path": "packages/resources/devicesettings",
+    "branch":      "cm-14.1"
   }
 ]
 
