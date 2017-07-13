@@ -15,19 +15,19 @@
     "branch":      "test"
   },
   {
-    "repository":  "SlimRoms/vendor_nxp-nfc_opensource_frameworks",
+    "repository":  "LineageOS/android_vendor_nxp-nfc_opensource_frameworks",
     "target_path": "vendor/nxp-nfc/opensource/frameworks",
-    "branch":      "ng7.1"
+    "branch":      "cm-14.1"
   },
   {
-    "repository":  "SlimRoms/vendor_nxp-nfc_opensource_libnfc-nci",
+    "repository":  "LineageOS/android_vendor_nxp-nfc_opensource_libnfc-nci",
     "target_path": "vendor/nxp-nfc/opensource/libnfc-nci",
-    "branch":      "ng7.1"
+    "branch":      "cm-14.1"
   },
   {
-    "repository":  "SlimRoms/vendor_nxp-nfc_opensource_Nfc",
+    "repository":  "LineageOS/android_vendor_nxp-nfc_opensource_Nfc",
     "target_path": "vendor/nxp-nfc/opensource/Nfc",
-    "branch":      "ng7.1"
+    "branch":      "cm-14.1"
   },
   {
    "repository":  "LineageOS/android_packages_resources_devicesettings",
