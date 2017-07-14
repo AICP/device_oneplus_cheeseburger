@@ -26,5 +26,5 @@
   <integer name="config_fingerprintSensorLocation">1</integer>
 
     <!-- When true enable gesture anywhere in Settings. -->
-    <bool name="config_gesture_settings_enabled">false</bool>
+    <bool name="config_gesture_settings_enabled">true</bool>
 </resources>
