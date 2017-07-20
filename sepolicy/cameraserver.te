@@ -1,4 +1,5 @@
 allow cameraserver persist_file:file rw_file_perms;
 allow cameraserver persist_file:file setattr;
 allow cameraserver cameraserver:process execmem;
+allow cameraserver self:process execmem;
 allow cameraserver shell_exec:file execute;
