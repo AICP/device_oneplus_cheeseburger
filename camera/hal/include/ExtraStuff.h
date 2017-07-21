@@ -1,0 +1,6 @@
+#ifndef CAMERA_HAL_EXTRASTUFF_H_
+#define CAMERA_HAL_EXTRASTUFF_H_
+
+#define HAL_PIXEL_FORMAT_RAW8 0x123
+
+#endif

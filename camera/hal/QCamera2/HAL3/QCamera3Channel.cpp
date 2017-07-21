@@ -49,6 +49,8 @@ extern "C" {
 #include "mm_camera_dbg.h"
 }
 
+#include <ExtraStuff.h>
+
 using namespace android;
 
 namespace qcamera {

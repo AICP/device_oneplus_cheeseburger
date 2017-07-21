@@ -56,6 +56,8 @@
 #include "QCamera3VendorTags.h"
 #include "QCameraTrace.h"
 
+#include <ExtraStuff.h>
+
 extern "C" {
 #include "mm_camera_dbg.h"
 }

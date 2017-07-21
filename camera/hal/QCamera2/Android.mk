@@ -1,7 +1,7 @@
 
 ifneq (,$(filter $(TARGET_ARCH), arm arm64))
 
-LOCAL_PATH:= $(call my-dir)
+LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
@@ -91,12 +91,16 @@ LOCAL_C_INCLUDES := \
         $(LOCAL_PATH)/stack/mm-camera-interface/inc \
         $(LOCAL_PATH)/util \
         $(LOCAL_PATH)/HAL3 \
+        $(LOCAL_PATH)/HAL \
+        $(LOCAL_PATH)/../include \
+        hardware/qcom/display-caf/msm8998/libqservice \
         hardware/libhardware/include/hardware \
-        hardware/qcom/media/libstagefrighthw \
-        hardware/qcom/media/mm-core/inc \
+        hardware/qcom/media-caf/msm8998/mm-core/inc \
         system/core/include/cutils \
         system/core/include/system \
-        system/media/camera/include/system
+        system/media/camera/include/system \
+        hardware/qcom/media-caf/msm8998/libstagefrighthw \
+        device/qcom/common/power
 
 #HAL 1.0 Include paths
 LOCAL_C_INCLUDES += \
@@ -124,11 +128,10 @@ endif
 
 LOCAL_CFLAGS += -DUSE_CAMERA_METABUFFER_UTILS
 
-#LOCAL_STATIC_LIBRARIES := libqcamera2_util
 LOCAL_C_INCLUDES += \
-        $(TARGET_OUT_HEADERS)/qcom/display
+        hardware/qcom/display/msm8998/libgralloc
 LOCAL_C_INCLUDES += \
-        hardware/qcom/display/libqservice
+        hardware/qcom/display/msm8998/libqdutils
 LOCAL_SHARED_LIBRARIES := libcamera_client liblog libhardware libutils libcutils libdl libsync libgui
 LOCAL_SHARED_LIBRARIES += libmmcamera_interface libmmjpeg_interface libui libcamera_metadata
 LOCAL_SHARED_LIBRARIES += libqdMetaData libqservice libbinder
