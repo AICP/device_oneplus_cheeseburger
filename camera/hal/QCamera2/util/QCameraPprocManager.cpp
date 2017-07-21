@@ -32,6 +32,7 @@
 #include "QCameraHALPP.h"
 #include "QCameraDualFOVPP.h"
 #include "QCameraBokeh.h"
+#include "QCameraClearSight.h"
 
 using namespace android;
 
@@ -106,6 +107,7 @@ int32_t QCameraHALPPManager::init(
             m_pPprocModule = new QCameraBokeh();
             break;
         case CAM_HAL_PP_TYPE_CLEARSIGHT:
+            m_pPprocModule = new QCameraClearSight();
             break;
         default:
             break;
@@ -206,7 +208,6 @@ int32_t QCameraHALPPManager::stop()
     int32_t rc = NO_ERROR;
     LOGH("E");
     if (m_bStarted) {
-        Mutex::Autolock l(mLock);
         m_pprocTh.sendCmd(CAMERA_CMD_TYPE_STOP_DATA_PROC, TRUE, TRUE);
         m_bStarted = false;
     }
@@ -551,10 +552,7 @@ void *QCameraHALPPManager::dataProcessRoutine(void *pData)
                                 LOGE("Error feeding input to HAL PP!!");
                             }
                         }
-                        {
-                            Mutex::Autolock l(pme->mLock);
-                            pme->m_pPprocModule->process();
-                        }
+                        pme->m_pPprocModule->process();
                     }
                 }
             }

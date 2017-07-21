@@ -34,6 +34,12 @@
 #include "QCameraHALPP.h"
 
 #define WIDE_TELE_CAMERA_NUMBER 2
+
+enum halPPInputType {
+    WIDE_INPUT = 0,
+    TELE_INPUT = 1
+};
+
 enum dualfov_af_status_t {
     AF_STATUS_VALID,
     AF_STATUS_INVALID

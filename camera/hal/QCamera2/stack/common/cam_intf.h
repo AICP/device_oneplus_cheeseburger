@@ -670,6 +670,12 @@ typedef struct cam_capability{
 
     /*Available Spatial Alignment solutions*/
     uint32_t avail_spatial_align_solns;
+
+    /* sensor rotation */
+    int32_t sensor_rotation;
+
+    /*Mono Stats support*/
+    uint8_t is_mono_stats_suport;
 } cam_capability_t;
 
 typedef enum {
@@ -809,6 +815,8 @@ typedef struct cam_stream_info {
     cam_sync_type_t cam_type;
     /* Signifies if stream sync cb is needed */
     uint32_t bStreamSyncCbNeeded;
+    /* signifies whether the stream needs to be bundled or not */
+    uint8_t bNoBundling;
 } cam_stream_info_t;
 
 /*****************************************************************************
@@ -1050,7 +1058,7 @@ typedef struct {
     INCLUDE(CAM_INTF_PARM_BRIGHTNESS,                   int32_t,                     1);
     INCLUDE(CAM_INTF_PARM_ISO,                          cam_intf_parm_manual_3a_t,   1);
     INCLUDE(CAM_INTF_PARM_EXPOSURE_TIME,                cam_intf_parm_manual_3a_t,   1);
-    INCLUDE(CAM_INTF_PARM_ZOOM,                         int32_t,                     1);
+    INCLUDE(CAM_INTF_PARM_USERZOOM,                     cam_zoom_info_t,             1);
     INCLUDE(CAM_INTF_PARM_ROLLOFF,                      int32_t,                     1);
     INCLUDE(CAM_INTF_PARM_MODE,                         int32_t,                     1);
     INCLUDE(CAM_INTF_PARM_AEC_ALGO_TYPE,                int32_t,                     1);
@@ -1097,7 +1105,8 @@ typedef struct {
     INCLUDE(CAM_INTF_PARM_QUADRA_CFA,                   int32_t,                     1);
     INCLUDE(CAM_INTF_META_RAW,                          cam_dimension_t,             1);
     INCLUDE(CAM_INTF_META_STREAM_INFO_FOR_PIC_RES,      cam_stream_size_info_t,      1);
-
+    INCLUDE(CAM_INTF_PARM_VFE1_RESERVED_RDI,            int32_t,                     1);
+    INCLUDE(CAM_INTF_PARM_SKIP_FINE_SCAN,               int32_t,                     1);
 
     /* HAL3 specific */
     INCLUDE(CAM_INTF_META_STREAM_INFO,                  cam_stream_size_info_t,      1);
