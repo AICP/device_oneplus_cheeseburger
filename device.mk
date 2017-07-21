@@ -136,7 +136,10 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap
+    OnePlusCamera \
+    camera.msm8998 \
+    libmmcamera_interface \
+    libmmjpeg_interface
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
