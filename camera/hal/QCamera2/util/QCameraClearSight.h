@@ -27,61 +27,65 @@
  *
  */
 
-#ifndef __QCAMERAEXTZOOMTRANSLATOR_H__
-#define __QCAMERAEXTZOOMTRANSLATOR_H__
+#ifndef __QCAMERA_CLEAR_SIGHT_H__
+#define __QCAMERA_CLEAR_SIGHT_H__
 
-#include "cam_intf.h"
+// Camera dependencies
+#include "QCameraHALPP.h"
 
-using namespace android;
+#define NUM_CAM 2
+
+enum halInputType {
+    BAYER_INPUT = 0,
+    MONO_INPUT = 1
+};
+
+typedef struct _clearsight_input_params_t {
+    cam_frame_size_t bayer;
+    cam_frame_size_t mono;
+    uint32_t frame_idx;
+} clearsight_input_params_t;
+
+typedef struct _clearsight_output_params_t {
+    cam_frame_size_t out;
+    uint32_t result;
+} clearsight_output_params_t;
+
 
 namespace qcamera {
 
-typedef enum {
-    MODE_CAMERA,
-    MODE_CAMCORDER,
-    MODE_RTB
-} dual_cam_mode;
-
-typedef struct {
-    uint32_t width;
-    uint32_t height;
-} dimension_t;
-
-typedef struct {
-    dual_cam_mode mode;
-    void*         calibData;
-    uint32_t      calibDataSize;
-    dimension_t   previewDimension;
-    dimension_t   ispOutDimension;
-    dimension_t   sensorOutDimensionMain;
-    dimension_t   sensorOutDimensionAux;
-    uint32_t     *zoomRatioTable;
-    uint32_t      zoomRatioTableCount;
-} zoom_trans_init_data;
-
-typedef struct {
-    uint32_t zoomWideTotal;
-    uint32_t zoomTeleTotal;
-    uint32_t zoomWideIsp;
-    uint32_t zoomTeleIsp;
-} zoom_data;
-
-class QCameraExtZoomTranslator {
+class QCameraClearSight : public QCameraHALPP
+{
 public:
-    ~QCameraExtZoomTranslator();
-    static QCameraExtZoomTranslator* create();
-    int32_t init(zoom_trans_init_data initData);
-    int32_t deInit();
-    int32_t getZoomValues(uint32_t userZoom, zoom_data* zoomData);
-    bool isInitialized();
+    QCameraClearSight();
+    ~QCameraClearSight();
+    int32_t init(halPPBufNotify bufNotifyCb, halPPGetOutput getOutputCb, void *pUserData,
+            void *pStaticParam);
+    int32_t deinit();
+    int32_t start();
+    int32_t feedInput(qcamera_hal_pp_data_t *pInputData);
+    int32_t feedOutput(qcamera_hal_pp_data_t *pOutputData);
+    int32_t process();
+protected:
+    bool canProcess();
 private:
-    QCameraExtZoomTranslator();
+    void getInputParams(mm_camera_buf_def_t *pMainMetaBuf, mm_camera_buf_def_t *pAuxMetaBuf,
+            QCameraStream* pMainSnapshotStream, QCameraStream* pAuxSnapshotStream,
+            clearsight_input_params_t& inParams);
+    int32_t doClearSightInit();
+    int32_t doClearSightProcess(const uint8_t* pWide, const uint8_t* pTele,
+            clearsight_input_params_t inParams, uint8_t* pOut);
+    void dumpYUVtoFile(const uint8_t* pBuf, cam_frame_len_offset_t offset, uint32_t idx,
+            const char* name_prefix);
+    void dumpInputParams(const clearsight_input_params_t& p);
 
-    void                   *mLibHandle;
-    bool                    mInitSuccess;
-    zoom_trans_init_data    mInitData;
-};
-
+private:
+    void *m_dlHandle;
+    const cam_capability_t *m_pCaps;
+}; // QCameraClearSight class
 }; // namespace qcamera
 
-#endif /* __QCAMERAEXTZOOMTRANSLATOR_H__ */
+#endif /* __QCAMERA_CLEAR_SIGHT_H__ */
+
+
+

@@ -388,7 +388,7 @@ private:
 
     bool isOnEncoder(const cam_dimension_t max_viewfinder_size,
             uint32_t width, uint32_t height);
-    void restoreHdrScene(uint8_t sceneMode, const camera_metadata_t *result);
+    camera_metadata_t* restoreHdrScene(uint8_t sceneMode, const camera_metadata_t *result);
     void hdrPlusPerfLock(mm_camera_super_buf_t *metadata_buf);
 
     static bool supportBurstCapture(uint32_t cameraId);
@@ -548,6 +548,7 @@ public:
     uint32_t mOpMode;
     bool mStreamConfig;
     QCameraCommon   mCommon;
+    cam_format_t mRdiModeFmt;
 private:
     uint32_t mFirstFrameNumberInBatch;
     camera3_stream_t mDummyBatchStream;
@@ -635,6 +636,7 @@ private:
     bool m_bSensorHDREnabled;
 
     uint8_t mCurrentSceneMode;
+    bool m_bOfflineIsp;
 };
 
 }; // namespace qcamera

@@ -111,6 +111,9 @@ typedef struct {
 
 #define EXIF_ASCII_PREFIX_SIZE           8   //(sizeof(ExifAsciiPrefix))
 
+//Min buffer requirement for B+M Clearsight fusion
+#define MIN_CLEARSIGHT_BUFS 3
+
 typedef enum {
     QCAMERA_NOTIFY_CALLBACK,
     QCAMERA_DATA_CALLBACK,
@@ -605,6 +608,7 @@ private:
             uint32_t cam_type = MM_CAMERA_TYPE_MAIN);
     uint32_t getCamHandleForChannel(qcamera_ch_type_enum_t ch_type);
     int32_t switchCameraCb(uint32_t camMaster);
+    void forceCameraWakeup();
     int32_t processCameraControl(uint32_t camState, bool bundledSnapshot,
             cam_fallback_mode_t fallbackMode);
     bool needSyncCB(cam_stream_type_t stream_type);

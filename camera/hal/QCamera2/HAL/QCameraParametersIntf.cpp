@@ -310,6 +310,13 @@ uint8_t QCameraParametersIntf::getNumOfExtraHDRInBufsIfNeeded()
     return mImpl->getNumOfExtraHDRInBufsIfNeeded();
 }
 
+uint8_t QCameraParametersIntf::getNumOfExtraEISBufsIfNeeded()
+{
+    Mutex::Autolock lock(mLock);
+    CHECK_PARAM_INTF(mImpl);
+    return mImpl->getNumOfExtraEISBufsIfNeeded();
+}
+
 uint8_t QCameraParametersIntf::getNumOfExtraHDROutBufsIfNeeded()
 {
     Mutex::Autolock lock(mLock);
@@ -1358,7 +1365,7 @@ bool QCameraParametersIntf::getDcrf()
 }
 
 int32_t QCameraParametersIntf::setRelatedCamSyncInfo(
-	cam_sync_related_sensors_event_info_t* info)
+    cam_sync_related_sensors_event_info_t* info)
 {
     Mutex::Autolock lock(mLock);
     CHECK_PARAM_INTF(mImpl);
@@ -1366,7 +1373,7 @@ int32_t QCameraParametersIntf::setRelatedCamSyncInfo(
 }
 
 const cam_sync_related_sensors_event_info_t*
-	QCameraParametersIntf::getRelatedCamSyncInfo(void)
+    QCameraParametersIntf::getRelatedCamSyncInfo(void)
 {
     Mutex::Autolock lock(mLock);
     CHECK_PARAM_INTF(mImpl);
@@ -1374,7 +1381,7 @@ const cam_sync_related_sensors_event_info_t*
 }
 
 int32_t QCameraParametersIntf::setFrameSyncEnabled(
-	bool enable)
+    bool enable)
 {
     Mutex::Autolock lock(mLock);
     CHECK_PARAM_INTF(mImpl);
@@ -1389,7 +1396,7 @@ bool QCameraParametersIntf::isFrameSyncEnabled(void)
 }
 
 int32_t QCameraParametersIntf::getRelatedCamCalibration(
-	cam_related_system_calibration_data_t* calib)
+    cam_related_system_calibration_data_t* calib)
 {
     Mutex::Autolock lock(mLock);
     CHECK_PARAM_INTF(mImpl);
@@ -1572,6 +1579,13 @@ void QCameraParametersIntf::initDCSettings(int32_t state, uint32_t camMaster,
     Mutex::Autolock lock(mLock);
     CHECK_PARAM_INTF(mImpl);
     mImpl->initDCSettings(state, camMaster, bundleSnapshot, fallback);
+}
+
+bool QCameraParametersIntf::needAnalysisStream()
+{
+    Mutex::Autolock lock(mLock);
+    CHECK_PARAM_INTF(mImpl);
+    return mImpl->needAnalysisStream();
 }
 
 }; // namespace qcamera
