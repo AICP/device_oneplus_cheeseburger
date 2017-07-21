@@ -1,4 +1,4 @@
-/* Copyright (c) 2012-2016, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2012-2017, The Linux Foundation. All rights reserved.
 *
 * Redistribution and use in source and binary forms, with or without
 * modification, are permitted provided that the following conditions are
@@ -416,8 +416,14 @@ QCameraStream::QCameraStream(QCameraAllocator &allocator,
     mFirstTimeStamp = 0;
     memset (&mStreamMetaMemory, 0,
             (sizeof(MetaMemory) * CAMERA_MIN_VIDEO_BATCH_BUFFERS));
+    pthread_condattr_t mCondAttr;
+
+    pthread_condattr_init(&mCondAttr);
+    pthread_condattr_setclock(&mCondAttr, CLOCK_MONOTONIC);
+
     pthread_mutex_init(&m_lock, NULL);
-    pthread_cond_init(&m_cond, NULL);
+    pthread_cond_init(&m_cond, &mCondAttr);
+    pthread_condattr_destroy(&mCondAttr);
 }
 
 /*===========================================================================
@@ -2973,7 +2979,8 @@ int32_t QCameraStream::setBundleInfo()
 
     if ((isTypeOf(CAM_STREAM_TYPE_METADATA))
             || (isTypeOf(CAM_STREAM_TYPE_OFFLINE_PROC))
-            || (isTypeOf(CAM_STREAM_TYPE_ANALYSIS))) {
+            || (isTypeOf(CAM_STREAM_TYPE_ANALYSIS) &&
+            mStreamInfo->bNoBundling)) {
         // Skip metadata for reprocess now because PP module cannot handle meta data
         // May need furthur discussion if Imaginglib need meta data
         return ret;
@@ -3006,12 +3013,17 @@ int32_t QCameraStream::setBundleInfo()
         mStreamInfo->aux_str_info->parm_buf = aux_param;
     }
 
-    if ((mStreamInfo->parm_buf.bundleInfo.num_of_streams > 1)
-            || (((mStreamInfo->aux_str_info != NULL) &&
-            (mStreamInfo->aux_str_info->parm_buf.bundleInfo.num_of_streams > 1)))) {
+    if (mStreamInfo->parm_buf.bundleInfo.num_of_streams > 1) {
         ret = mCamOps->set_stream_parms(mCamHandle,
-                mChannelHandle, mHandle,
+                get_main_camera_handle(mChannelHandle), get_main_camera_handle(mHandle),
                 &mStreamInfo->parm_buf);
+    }
+
+    if ((mStreamInfo->aux_str_info != NULL) &&
+            (mStreamInfo->aux_str_info->parm_buf.bundleInfo.num_of_streams > 1)) {
+        ret = mCamOps->set_stream_parms(mCamHandle,
+                get_aux_camera_handle(mChannelHandle), get_aux_camera_handle(mHandle),
+                &mStreamInfo->aux_str_info->parm_buf);
     }
     pthread_mutex_unlock(&mParameterLock);
     if (ret != NO_ERROR) {

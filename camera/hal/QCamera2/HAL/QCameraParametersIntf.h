@@ -118,6 +118,7 @@ public:
     uint8_t getNumOfRetroSnapshots();
     uint8_t getNumOfExtraHDRInBufsIfNeeded();
     uint8_t getNumOfExtraHDROutBufsIfNeeded();
+    uint8_t getNumOfExtraEISBufsIfNeeded();
 
     bool getRecordingHintValue();
     uint32_t getJpegQuality();
@@ -328,6 +329,7 @@ public:
     int32_t setDCLowPowerMode(uint32_t state);
     void initDCSettings(int32_t state, uint32_t camMaster,
         bool bundleSnapshot, cam_fallback_mode_t fallbackMode);
+    bool needAnalysisStream();
 private:
     QCameraParameters *mImpl;
     mutable Mutex mLock;

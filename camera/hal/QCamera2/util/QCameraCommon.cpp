@@ -37,7 +37,7 @@
 #include <string.h>
 #include <utils/Log.h>
 #include <math.h>
-
+#include <fcntl.h>
 
 // Camera dependencies
 #include "QCameraCommon.h"
@@ -300,6 +300,78 @@ bool QCameraCommon::isVideoUBWCEnabled()
 #else
     return FALSE;
 #endif
+}
+
+
+
+/*===========================================================================
+ * FUNCTION   : is_target_SDM630
+ *
+ * DESCRIPTION: Function to check whether target is sdm630 or not.
+ *
+ * PARAMETERS : None
+ *
+ * RETURN     : TRUE -- SDM630 target.
+ *              FALSE -- Some other target.
+ *==========================================================================*/
+
+bool QCameraCommon::is_target_SDM630()
+{
+    int fd;
+    bool is_target_SDM630=false;
+    char buf[10] = {0};
+    fd = open("/sys/devices/soc0/soc_id", O_RDONLY);
+    if (fd >= 0) {
+        if (read(fd, buf, sizeof(buf) - 1) == -1) {
+            ALOGW("Unable to read soc_id");
+            is_target_SDM630 = false;
+        } else {
+            int soc_id = atoi(buf);
+            if (soc_id == 318 || soc_id== 327) {
+            is_target_SDM630 = true; /* Above SOCID for SDM630 */
+            }
+        }
+    }
+    close(fd);
+    return is_target_SDM630;
+}
+
+
+bool QCameraCommon::skipAnalysisBundling()
+{
+    //Enabling analysis stream dynamically at ISP requires removing
+    //it from bundled list of streams. This has the advantage of power
+    //savings. But as of now, this feature is enabled only via setprop.
+    //So, by default analysis stream gets bundled.
+    char prop[PROPERTY_VALUE_MAX];
+    bool needBundling = true;
+    memset(prop, 0, sizeof(prop));
+    property_get("persist.camera.isp.analysis_en", prop, "1");
+    needBundling = atoi(prop);
+
+    return !needBundling;
+}
+
+/*===========================================================================
+ * FUNCTION   : needAnalysisStream
+ *
+ * DESCRIPTION: Function to check whether analysis stream is needed or not
+ *
+ * PARAMETERS : None
+ *
+ * RETURN     : TRUE /FALSE
+ *==========================================================================*/
+bool QCameraCommon::needAnalysisStream()
+{
+    bool needAnalysisStream = true;
+    cam_capability_t *caps = (m_pCapability->aux_cam_cap != NULL) ?
+            m_pCapability->aux_cam_cap : m_pCapability;
+    if ((caps->color_arrangement == CAM_FILTER_ARRANGEMENT_Y) &&
+            caps->is_mono_stats_suport) {
+        needAnalysisStream = false;
+    }
+
+    return needAnalysisStream;
 }
 
 }; // namespace qcamera
