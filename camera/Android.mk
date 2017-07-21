@@ -1,4 +1,5 @@
 # Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2017 The halogenOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,16 +15,4 @@
 
 LOCAL_PATH := $(call my-dir)
 
-include $(CLEAR_VARS)
-
-LOCAL_C_INCLUDES := \
-    frameworks/av/include
-
-LOCAL_SRC_FILES := \
-    CameraParameters.cpp
-
-LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)
-LOCAL_MODULE := libcamera_parameters_ext
-LOCAL_MODULE_TAGS := optional
-
-include $(BUILD_STATIC_LIBRARY)
+include device/oneplus/oneplus2/camera/hal/Android.mk
