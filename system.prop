@@ -39,6 +39,7 @@ audio.noisy.broadcast.delay=600
 audio.adm.buffering.ms=3
 audio.offload.min.duration.secs=30
 persist.dirac.acs.controller=qem
+af.fast_track_multiplier=1
 #########################################
 # Best openly available quality
 af.resampler.quality=7
