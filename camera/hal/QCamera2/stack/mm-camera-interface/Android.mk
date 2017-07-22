@@ -11,7 +11,8 @@ MM_CAM_FILES := \
         src/mm_camera_channel.c \
         src/mm_camera_stream.c \
         src/mm_camera_thread.c \
-        src/mm_camera_sock.c
+        src/mm_camera_sock.c \
+        src/mm_camera_compat.cpp
 
 ifeq ($(CAMERA_DAEMON_NOT_PRESENT), true)
 else
