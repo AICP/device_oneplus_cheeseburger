@@ -1,4 +1,5 @@
 
+ifeq ($(TARGET_BUILD_OP5_CAMERA_HAL),true)
 ifneq (,$(filter $(TARGET_ARCH), arm arm64))
 
 LOCAL_PATH := $(call my-dir)
@@ -148,4 +149,5 @@ LOCAL_32_BIT_ONLY := $(BOARD_QTI_CAMERA_32BIT_ONLY)
 include $(BUILD_SHARED_LIBRARY)
 
 include $(call first-makefiles-under,$(LOCAL_PATH))
+endif
 endif

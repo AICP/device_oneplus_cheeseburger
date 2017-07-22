@@ -137,7 +137,6 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     OnePlusCamera \
-    camera.msm8998 \
     libmmcamera_interface \
     libmmjpeg_interface
 

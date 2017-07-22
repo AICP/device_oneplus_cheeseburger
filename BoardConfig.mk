@@ -135,6 +135,8 @@ BOARD_USE_SAMSUNG_COLORFORMAT_NV21 := true
 BOARD_BUILD_OP5_CAMERA := true
 # For the flag above
 USE_DEVICE_SPECIFIC_CAMERA := true
+# Build libmmcamera_interface and libmmjpeg_interface but not camera.msm8998
+TARGET_BUILD_OP5_CAMERA_HAL := false
 
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
