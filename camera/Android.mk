@@ -15,4 +15,4 @@
 
 LOCAL_PATH := $(call my-dir)
 
-include device/oneplus/oneplus2/camera/hal/Android.mk
+include device/oneplus/cheeseburger/camera/hal/Android.mk
