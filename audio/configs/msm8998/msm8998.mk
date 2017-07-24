@@ -72,7 +72,6 @@ PRODUCT_COPY_FILES += \
     device/oneplus/cheeseburger/audio/configs/msm8998/mixer_paths_qvr.xml:system/etc/mixer_paths_qvr.xml \
     device/oneplus/cheeseburger/audio/configs/msm8998/mixer_paths_tavil.xml:system/etc/mixer_paths_tavil.xml \
     device/oneplus/cheeseburger/audio/configs/msm8998/mixer_paths_skuk.xml:system/etc/mixer_paths_skuk.xml \
-    device/oneplus/cheeseburger/audio/configs/msm8998/mixer_paths_skuk.xml:system/etc/mixer_paths_qvr.xml \
     device/oneplus/cheeseburger/audio/configs/msm8998/mixer_paths_dtp.xml:system/etc/mixer_paths_dtp.xml \
     device/oneplus/cheeseburger/audio/configs/msm8998/mixer_paths_i2s.xml:system/etc/mixer_paths_i2s.xml \
     device/oneplus/cheeseburger/audio/configs/msm8998/aanc_tuning_mixer.txt:system/etc/aanc_tuning_mixer.txt \
@@ -84,9 +83,6 @@ PRODUCT_COPY_FILES += \
     device/oneplus/cheeseburger/audio/configs/msm8998/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml \
     device/oneplus/cheeseburger/audio/configs/msm8998/graphite_ipc_platform_info.xml:system/etc/graphite_ipc_platform_info.xml \
     device/oneplus/cheeseburger/audio/configs/msm8998/audio_platform_info.xml:system/etc/audio_platform_info.xml
-# wangdongdong@MultiMediaService,2016/09/30,add smartpa firmware
-PRODUCT_COPY_FILES += \
-    device/oneplus/cheeseburger/audio/configs/msm8998/tfa98xx.cnt:system/etc/firmware/tfa98xx.cnt
 
 #XML Audio configuration files
 ifeq ($(USE_XML_AUDIO_POLICY_CONF), 1)
