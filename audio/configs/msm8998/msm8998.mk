@@ -64,20 +64,12 @@ AUDIO_FEATURE_ENABLED_RAS := true
 #Audio Specific device overlays
 DEVICE_PACKAGE_OVERLAYS += device/oneplus/cheeseburger/audio/configs/common/overlay
 
-# Audio configuration file
-ifeq ($(TARGET_USES_AOSP), true)
-PRODUCT_COPY_FILES += \
-    device/qcom/common/media/audio_policy.conf:system/etc/audio_policy.conf
-else
-PRODUCT_COPY_FILES += \
-    device/oneplus/cheeseburger/audio/configs/msm8998/audio_policy.conf:system/etc/audio_policy.conf
-endif
-
 PRODUCT_COPY_FILES += \
     device/oneplus/cheeseburger/audio/configs/msm8998/audio_output_policy.conf:system/vendor/etc/audio_output_policy.conf \
     device/oneplus/cheeseburger/audio/configs/msm8998/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     device/oneplus/cheeseburger/audio/configs/msm8998/mixer_paths.xml:system/etc/mixer_paths.xml \
     device/oneplus/cheeseburger/audio/configs/msm8998/mixer_paths_tasha.xml:system/etc/mixer_paths_tasha.xml \
+    device/oneplus/cheeseburger/audio/configs/msm8998/mixer_paths_qvr.xml:system/etc/mixer_paths_qvr.xml \
     device/oneplus/cheeseburger/audio/configs/msm8998/mixer_paths_tavil.xml:system/etc/mixer_paths_tavil.xml \
     device/oneplus/cheeseburger/audio/configs/msm8998/mixer_paths_skuk.xml:system/etc/mixer_paths_skuk.xml \
     device/oneplus/cheeseburger/audio/configs/msm8998/mixer_paths_skuk.xml:system/etc/mixer_paths_qvr.xml \
@@ -100,15 +92,13 @@ PRODUCT_COPY_FILES += \
 ifeq ($(USE_XML_AUDIO_POLICY_CONF), 1)
 ifeq ($(TARGET_USES_AOSP), true)
 PRODUCT_COPY_FILES += \
-    device/oneplus/cheeseburger/audio/configs/msm8998/audio_policy_configuration.xml:/system/etc/audio_policy_configuration.xml
+    device/oneplus/cheeseburger/audio/configs/msm8998/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml
 else
 PRODUCT_COPY_FILES += \
     device/oneplus/cheeseburger/audio/configs/msm8998/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml
 endif
 PRODUCT_COPY_FILES += \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:/system/etc/a2dp_audio_policy_configuration.xml \
-    $(TOPDIR)frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:/system/etc/audio_policy_volumes.xml \
-    $(TOPDIR)frameworks/av/services/audiopolicy/config/default_volume_tables.xml:/system/etc/default_volume_tables.xml \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:/system/etc/r_submix_audio_policy_configuration.xml \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:/system/etc/usb_audio_policy_configuration.xml
 endif
