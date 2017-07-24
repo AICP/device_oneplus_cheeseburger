@@ -82,7 +82,9 @@ PRODUCT_COPY_FILES += \
     device/oneplus/cheeseburger/audio/configs/msm8998/sound_trigger_mixer_paths_wcd9340.xml:system/etc/sound_trigger_mixer_paths_wcd9340.xml \
     device/oneplus/cheeseburger/audio/configs/msm8998/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml \
     device/oneplus/cheeseburger/audio/configs/msm8998/graphite_ipc_platform_info.xml:system/etc/graphite_ipc_platform_info.xml \
-    device/oneplus/cheeseburger/audio/configs/msm8998/audio_platform_info.xml:system/etc/audio_platform_info.xml
+    device/oneplus/cheeseburger/audio/configs/msm8998/audio_platform_info.xml:system/etc/audio_platform_info.xml \
+    device/oneplus/cheeseburger/audio/configs/msm8998/audio_policy_volumes.xml:system/etc/audio_policy_volumes.xml \
+    device/oneplus/cheeseburger/audio/configs/msm8998/default_volume_tables.xml:system/etc/default_volume_tables.xml
 
 #XML Audio configuration files
 ifeq ($(USE_XML_AUDIO_POLICY_CONF), 1)
