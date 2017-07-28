@@ -606,19 +606,16 @@
     <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia5" value="0" />
     <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia7" value="0" />
     <ctl name="mono Profile" value="music_hq" />
+    <ctl name="left Profile" value="0"/>
     <ctl name="BOB Power" value="0" />
-<!--#endif-->
-    <!-- split a2dp -->
-    <ctl name="BT SampleRate" value="KHZ_8" />
-    <ctl name="AFE Input Channels" value="Zero" />
-    <ctl name="SLIM7_RX ADM Channels" value="Zero" />
-    <!-- split a2dp end-->
+    <!-- tfa98xx end-->
 
     <!-- mic mode-->
     <ctl name="AMIC_3_4 PWR MODE" value="DEFAULT" />
     <ctl name="AMIC_5_6 PWR MODE" value="DEFAULT" />
 
 <!-- #endif -->
+
     <!-- ADSP testfwk -->
     <ctl name="SLIMBUS_DL_HL Switch" value="0" />
     <ctl name="SLIMBUS6_DL_HL Switch" value="0" />
@@ -748,8 +745,8 @@
     </path>
 
     <path name="deep-buffer-playback speaker-and-headphones">
-       <ctl name="SLIMBUS_6_RX Audio Mixer MultiMedia1" value="1" />
-       <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia1" value="1" />
+        <path name="deep-buffer-playback headphones" />
+        <path name="deep-buffer-playback speaker" />
     </path>
 
     <path name="low-latency-playback">
@@ -818,8 +815,8 @@
     </path>
 
     <path name="low-latency-playback speaker-and-headphones">
-        <ctl name="SLIMBUS_6_RX Audio Mixer MultiMedia5" value="1" />
-        <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia5" value="1" />
+        <path name="low-latency-playback headphones" />
+        <path name="low-latency-playback speaker" />
     </path>
 
     <path name="audio-ull-playback">
@@ -1047,8 +1044,8 @@
     </path>
 
     <path name="compress-offload-playback2 speaker-and-headphones">
-        <ctl name="SLIMBUS_6_RX Audio Mixer MultiMedia7" value="1" />
-	<ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia7" value="1" />
+        <path name="compress-offload-playback2 headphones" />
+        <path name="compress-offload-playback2 speaker" />
     </path>
 
     <path name="compress-offload-playback3">
@@ -2325,11 +2322,7 @@
     </path>
 
     <path name="handset">
-<<<<<<< HEAD:audio/mixer_paths_tasha.xml
-        <ctl name="BOB Power" value="1" />
-=======
 		<ctl name="BOB Power" value="1" />
->>>>>>> 26e34861... cheeseburger: audio: import audio hal from OnePlus:audio/configs/msm8998/mixer_paths_tasha.xml
         <ctl name="COMP7 Switch" value="1" />
         <ctl name="SLIM RX0 MUX" value="AIF_MIX1_PB" />
         <ctl name="SLIM_0_RX Channels" value="One" />
@@ -2373,11 +2366,7 @@
     </path>
 
     <path name="anc-handset">
-<<<<<<< HEAD:audio/mixer_paths_tasha.xml
-        <ctl name="BOB Power" value="1" />
-=======
 	<ctl name="BOB Power" value="1" />
->>>>>>> 26e34861... cheeseburger: audio: import audio hal from OnePlus:audio/configs/msm8998/mixer_paths_tasha.xml
         <ctl name="ANC Function" value="ON" />
         <ctl name="ANC Slot" value="6" />
         <ctl name="SLIM RX0 MUX" value="AIF_MIX1_PB" />
