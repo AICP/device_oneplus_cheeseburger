@@ -37,6 +37,11 @@ TARGET_OTA_ASSERT_DEVICE := OnePlus5,cheeseburger,oneplus5,op5,A5000
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true
 
+# Bootanimation boost
+TARGET_BOOTANIMATION_MULTITHREAD_DECODE := true
+TARGET_BOOTANIMATION_PRELOAD := true
+TARGET_BOOTANIMATION_TEXTURE_CACHE := true
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := msm8998
 TARGET_NO_BOOTLOADER := true
@@ -65,19 +70,15 @@ TARGET_USES_UEFI := true
 TARGET_USES_64_BIT_BINDER := true
 
 # Kernel
-
-BOARD_KERNEL_CMDLINE := \
-        androidboot.hardware=qcom \
-        ehci-hcd.park=3 \
-        lpm_levels.sleep_disabled=1 \
-        sched_enable_hmp=1 \
-        sched_enable_power_aware=1 \
-        service_locator.enable=1 \
-        swiotlb=2048 \
-    androidboot.usbcontroller=a800000.dwc3 \
-    androidboot.selinux=permissive \
-    androidboot.verifiedbootstate=green \
-    androidboot.veritymode=enforcing
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom \
+    user_debug=31 \
+    msm_rtb.filter=0x237 \
+    ehci-hcd.park=3 \
+    lpm_levels.sleep_disabled=1 \
+    sched_enable_hmp=1 \
+    sched_enable_power_aware=1 \
+    service_locator.enable=1 \
+    swiotlb=2048
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
@@ -89,7 +90,12 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/oneplus/msm8998
 TARGET_KERNEL_CONFIG := cheeseburger_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
-TARGET_KERNEL_BUILD_VARIANT := user
+
+# AOSP and OOS Hacks
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive \
+    androidboot.usbcontroller=a800000.dwc3 \
+    androidboot.verifiedbootstate=green \
+    androidboot.veritymode=enforcing
 
 # Enable real time lockscreen charging current values
 BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
@@ -184,7 +190,17 @@ VSYNC_EVENT_PHASE_OFFSET_NS := 0
 SF_VSYNC_EVENT_PHASE_OFFSET_NS := 0
 
 # Dexpreopt
-WITH_DEXPREOPT := false
+#WITH_DEXPREOPT := false
+ifeq ($(HOST_OS),linux)
+  ifeq ($(call match-word-in-list,$(TARGET_BUILD_VARIANT),user),true)
+    ifeq ($(WITH_DEXPREOPT),)
+      WITH_DEXPREOPT := true
+    endif
+  endif
+endif
+
+# FM
+BOARD_HAVE_QCOM_FM := true
 
 # GPS
 TARGET_NO_RPC := true
@@ -213,6 +229,8 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 # Power
 TARGET_POWERHAL_VARIANT := none
+# Change to QCOM, when LOS implemented msm8998 battery profiles in qcom_common
+#TARGET_POWERHAL_VARIANT := qcom
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/recovery.fstab
