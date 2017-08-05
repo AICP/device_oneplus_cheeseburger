@@ -80,7 +80,7 @@ PRODUCT_COPY_FILES += \
     device/oneplus/cheeseburger/audio/configs/msm8998/mixer_paths_tasha.xml:system/etc/mixer_paths_tasha.xml \
     device/oneplus/cheeseburger/audio/configs/msm8998/mixer_paths_tavil.xml:system/etc/mixer_paths_tavil.xml \
     device/oneplus/cheeseburger/audio/configs/msm8998/mixer_paths_skuk.xml:system/etc/mixer_paths_skuk.xml \
-    device/oneplus/cheeseburger/audio/configs/msm8998/mixer_paths_skuk.xml:system/etc/mixer_paths_qvr.xml \
+    device/oneplus/cheeseburger/audio/configs/msm8998/mixer_paths_qvr.xml:system/etc/mixer_paths_qvr.xml \
     device/oneplus/cheeseburger/audio/configs/msm8998/mixer_paths_dtp.xml:system/etc/mixer_paths_dtp.xml \
     device/oneplus/cheeseburger/audio/configs/msm8998/mixer_paths_i2s.xml:system/etc/mixer_paths_i2s.xml \
     device/oneplus/cheeseburger/audio/configs/msm8998/aanc_tuning_mixer.txt:system/etc/aanc_tuning_mixer.txt \
@@ -113,7 +113,7 @@ PRODUCT_COPY_FILES += \
 
 # Reduce client buffer size for fast audio output tracks
 PRODUCT_PROPERTY_OVERRIDES += \
-    af.fast_track_multiplier=1
+    af.fast_track_multiplier=2
 
 # Low latency audio buffer size in frames
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -121,9 +121,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 ##fluencetype can be "fluence" or "fluencepro" or "none"
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.qc.sdk.audio.fluencetype=none\
+ro.qc.sdk.audio.fluencetype=fluencepro\
 persist.audio.fluence.voicecall=true\
-persist.audio.fluence.voicerec=false\
+persist.audio.fluence.voicerec=true\
 persist.audio.fluence.speaker=true
 
 #disable tunnel encoding
@@ -177,7 +177,7 @@ audio.dolby.ds2.hardbypass=true
 
 #Disable Multiple offload sesison
 PRODUCT_PROPERTY_OVERRIDES += \
-audio.offload.multiple.enabled=false
+audio.offload.multiple.enabled=true
 
 #Disable Compress passthrough playback
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -197,7 +197,7 @@ audio.safx.pbe.enabled=true
 
 #parser input buffer size(256kb) in byte stream mode
 PRODUCT_PROPERTY_OVERRIDES += \
-audio.parser.ip.buffer.size=262144
+audio.parser.ip.buffer.size=0
 
 #flac sw decoder 24 bit decode capability
 PRODUCT_PROPERTY_OVERRIDES += \
