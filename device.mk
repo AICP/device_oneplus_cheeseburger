@@ -171,7 +171,8 @@ PRODUCT_PACKAGES += \
     libloc_pla \
     libloc_stub \
     libcurl \
-    libgnsspps
+    libgnsspps \
+    libvehiclenetwork-native
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/flp.conf:system/vendor/etc/flp.conf \
