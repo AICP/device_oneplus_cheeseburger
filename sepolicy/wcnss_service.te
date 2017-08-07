@@ -16,3 +16,4 @@ allow wcnss_service toolbox_exec:file {
 };
 allow wcnss_service diag_prop:property_service set;
 get_prop(wcnss_service, diag_prop);
+
