@@ -1,1 +1,1 @@
-allow msm_irqbalanced proc_stat:file read;
+allow msm_irqbalanced proc_stat:file { r_file_perms };

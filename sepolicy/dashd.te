@@ -21,6 +21,7 @@ binder_call(dashd, system_server)
 # Read /sys/fs/pstore/console-ramoops
 # Don't worry about overly broad permissions for now, as there's
 # only one file in /sys/fs/pstore
+
 allow dashd pstorefs:dir r_dir_perms;
 allow dashd pstorefs:file r_file_perms;
 
@@ -32,6 +33,7 @@ allow dashd tty_device:chr_file rw_file_perms;
 allow dashd ashmem_device:chr_file execute;
 allow dashd self:process execmem;
 allow dashd proc_sysrq:file rw_file_perms;
+
 allow dashd self:capability { sys_boot dac_override};
 allow dashd device:dir { open read write } ;
 #allow dashd device:chr_file { write read };
