@@ -27,4 +27,6 @@
 
     <!-- When true enable gesture anywhere in Settings. -->
     <bool name="config_gesture_settings_enabled">true</bool>
+
+  <bool name="config_voice_over_lte_enabled">true</bool>
 </resources>
