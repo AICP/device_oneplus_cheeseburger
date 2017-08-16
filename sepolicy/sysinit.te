@@ -1,0 +1,7 @@
+allow sysinit adsprpcd_file:dir getattr;
+allow sysinit cache_file:dir getattr;
+allow sysinit proc:file write;
+allow sysinit proc_dirty_ratio:file write;
+allow sysinit storage_file:dir getattr;
+allow sysinit system_block_device:blk_file read;
+allow sysinit system_data_file:dir write;
