@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "05862813_6288a217",
+        "filename": "sepolicy/sdcardd.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 190
+      },
+      "writtenOn": "2017-08-17T11:56:12Z",
+      "side": 1,
+      "message": "sdcardd? double \"d\"?",
+      "revId": "fca063cf9e5903ed4af790835817fb7e6ab3f4b4",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": false
+    }
+  ]
+}
