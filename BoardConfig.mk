@@ -164,6 +164,7 @@ BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
 # CM Hardware
 BOARD_HARDWARE_CLASS += $(PLATFORM_PATH)/cmhw
+TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
 # CNE and DPM
 BOARD_USES_QCNE := true
@@ -231,7 +232,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_USERIMAGES_USE_EXT4 := true
 
 # Power
-TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 TARGET_POWERHAL_VARIANT := none
 
 # Recovery
