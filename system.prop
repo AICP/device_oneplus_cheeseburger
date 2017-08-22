@@ -67,7 +67,7 @@ persist.ts.rtmakeup=false
 persist.cne.feature=1
 
 # Core control
-ro.core_ctl_min_cpu=2
+ro.core_ctl_min_cpu=1
 ro.core_ctl_max_cpu=4
 
 # Data
@@ -82,7 +82,7 @@ drm.service.enabled=true
 ro.frp.pst=/dev/block/bootdevice/by-name/config
 
 # Graphics
-ro.sf.lcd_density=480
+ro.sf.lcd_density=420
 debug.sf.hw=1
 debug.gralloc.enable_fb_ubwc=1
 dev.pm.dyn_samplingrate=1
