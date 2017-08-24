@@ -93,7 +93,7 @@ TARGET_KERNEL_CONFIG := lineage_cheeseburger_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 # AOSP and OOS Hacks
-    androidboot.usbcontroller=a800000.dwc3 \
+BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a800000.dwc3 \
     androidboot.verifiedbootstate=green \
     androidboot.veritymode=enforcing
 
