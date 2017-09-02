@@ -321,7 +321,7 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
-    kernel_loggy.sh
+    loggy.sh
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/bin/init.qti.qseecomd.sh:system/bin/init.qti.qseecomd.sh \

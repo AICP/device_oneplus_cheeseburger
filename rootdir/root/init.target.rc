@@ -437,7 +437,12 @@ service qdmastatsd /system/bin/qdmastatsd
     user system
     group system
 
-service kernel_loggy /system/bin/sh /kernel_loggy.sh
+service kernel_loggy /system/bin/sh /loggy.sh kernel
+    class main
+    user root
+    oneshot
+
+service system_loggy /system/bin/sh /loggy.sh system
     class main
     user root
     oneshot
