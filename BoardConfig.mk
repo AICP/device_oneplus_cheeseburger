@@ -79,7 +79,10 @@ BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom \
     sched_enable_hmp=1 \
     sched_enable_power_aware=1 \
     service_locator.enable=1 \
-    swiotlb=2048
+    swiotlb=2048 \
+    androidboot.usbcontroller=a800000.dwc3 \
+    androidboot.verifiedbootstate=green \
+    androidboot.veritymode=enforcing
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
@@ -93,11 +96,6 @@ TARGET_KERNEL_CONFIG := lineage_cheeseburger_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_FRESHLY_COMPILED_DTBTOOL := true
 TARGET_KERNEL_BUILD_VARIANT := user
-
-# AOSP and OOS Hacks
-BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a800000.dwc3 \
-    androidboot.verifiedbootstate=green \
-    androidboot.veritymode=enforcing
 
 # Enable real time lockscreen charging current values
 BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
@@ -177,9 +175,10 @@ QCOM_BT_USE_SMD_TTY := true
 
 # Camera
 BOARD_QTI_CAMERA_32BIT_ONLY := true
+TARGET_CAMERASERVICE_CLOSES_NATIVE_HANDLES := true
+TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY := libcamera_parameters_ext
 TARGET_USES_MEDIA_EXTENSIONS := true
 USE_DEVICE_SPECIFIC_CAMERA := true
-TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY := libcamera_parameters_ext
 
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
@@ -219,8 +218,7 @@ OVERRIDE_RS_DRIVER:= libRSDriver_adreno.so
 VSYNC_EVENT_PHASE_OFFSET_NS := 2000000
 SF_VSYNC_EVENT_PHASE_OFFSET_NS := 6000000
 
-# Enable dexpreopt to speed boot time
-#WITH_DEXPREOPT := false
+# DEXPREOPT
 ifeq ($(HOST_OS),linux)
   ifeq ($(call match-word-in-list,$(TARGET_BUILD_VARIANT),user),true)
     ifeq ($(WITH_DEXPREOPT),)
@@ -269,7 +267,6 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 BOARD_SUPPRESS_EMMC_WIPE := true
-#RECOVERY_VARIANT := twrp
 
 # RIL
 TARGET_RIL_VARIANT := caf
@@ -284,23 +281,6 @@ USE_SENSOR_MULTI_HAL := true
 
 # Timeservice
 BOARD_USES_QC_TIME_SERVICES := true
-
-# TWRP recovery default settings
-ifeq ($(RECOVERY_VARIANT),twrp)
-RECOVERY_SDCARD_ON_DATA := true
-BOARD_HAS_NO_REAL_SDCARD := true
-TARGET_RECOVERY_QCOM_RTC_FIX := true
-TW_THEME := portrait_hdpi
-TW_EXTRA_LANGUAGES := true
-TW_INCLUDE_CRYPTO := true
-TW_INPUT_BLACKLIST := "hbtp_vm"
-TW_IGNORE_MISC_WIPE_DATA := true
-TW_DEFAULT_BRIGHTNESS := 50
-TW_NEW_ION_HEAP := true
-TW_SCREEN_BLANK_ON_BOOT := true
-TW_EXCLUDE_DEFAULT_USB_INIT := true
-TWRP_INCLUDE_LOGCAT := true
-endif
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
