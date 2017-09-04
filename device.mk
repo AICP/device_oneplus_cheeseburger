@@ -103,6 +103,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapminfree=4m \
     dalvik.vm.heapmaxfree=8m
 
+# Telephony
+PRODUCT_PACKAGES  += telephony-ext
+PRODUCT_BOOT_JARS += telephony-ext
+
 # Haters gonna hate..
 PRODUCT_CHARACTERISTICS := nosdcard
 
@@ -201,6 +205,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/lowi.conf:system/vendor/etc/lowi.conf \
     $(LOCAL_PATH)/gps/etc/sap.conf:system/vendor/etc/sap.conf \
     $(LOCAL_PATH)/gps/etc/xtwifi.conf:system/vendor/etc/xtwifi.conf
+
+# IFAA (Fingerprint support for Alipay)
+PRODUCT_PACKAGES += \
+    org.ifaa.android.manager
+
+PRODUCT_BOOT_JARS += \
+    org.ifaa.android.manager
 
 # IPv6
 PRODUCT_PACKAGES += \
