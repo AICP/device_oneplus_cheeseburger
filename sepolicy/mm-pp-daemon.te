@@ -1,0 +1,2 @@
+allow mm-pp-daemon self:socket create_socket_perms;
+r_dir_file(mm-pp-daemon, sensors_persist_file);
