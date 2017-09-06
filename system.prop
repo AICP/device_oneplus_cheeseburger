@@ -71,12 +71,8 @@ camera.aux.packagelist=org.codeaurora.snapcam,com.oneplus.camera
 persist.camera.mobicat=2
 persist.camera.stats.debugexif=3080192
 persist.ts.rtmakeup=false
-# Snap values for adding features
-ro.qc.sdk.audio.ssr=false
-persist.audio.ssr.3mic=false
 camera.disable_zsl_mode=0
 persist.camera.zsl.mode=1
-# Get Google Camera working properly
 persist.camera.HAL3.enabled=1
 
 # CNE
