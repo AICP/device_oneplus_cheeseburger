@@ -10,3 +10,10 @@ allow cameraserver shell_exec:file { r_file_perms };
 
 allow cameraserver adsprpcd_file:dir { getattr search };
 allow cameraserver adsprpcd_file:file { r_file_perms };
+
+allow cameraserver adsprpcd_file:dir read;
+allow cameraserver sdcardfs:dir search;
+allow cameraserver shell_exec:file execute;
+allow cameraserver storage_file:dir search;
+allow cameraserver sysfs:file write;
+
