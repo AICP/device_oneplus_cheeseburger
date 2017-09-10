@@ -175,8 +175,11 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-impl \
+    android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.configstore@1.0-service \
     android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service \
     copybit.msm8998 \
     gralloc.msm8998 \
     hwcomposer.msm8998 \
@@ -220,6 +223,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/lowi.conf:system/vendor/etc/lowi.conf \
     $(LOCAL_PATH)/gps/etc/sap.conf:system/vendor/etc/sap.conf \
     $(LOCAL_PATH)/gps/etc/xtwifi.conf:system/vendor/etc/xtwifi.conf
+
+# Healthd
+#PRODUCT_PACKAGES += \
+#    android.hardware.health@1.0-convert \
+#    android.hardware.health@1.0-impl \
+#    android.hardware.health@1.0-service \
 
 # IPv6
 PRODUCT_PACKAGES += \
