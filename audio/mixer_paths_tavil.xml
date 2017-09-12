@@ -1568,6 +1568,10 @@
         <ctl name="Voip_Tx Mixer SLIM_0_TX_Voip" value="1" />
     </path>
 
+    <path name="compress-voip-call bt-a2dp">
+        <ctl name="SLIM_7_RX_Voice Mixer Voip" value="1" />
+        <ctl name="Voip_Tx Mixer SLIM_0_TX_Voip" value="1" />
+    </path>
 
     <path name="compress-voip-call bt-sco">
         <ctl name="SLIM_7_RX_Voice Mixer Voip" value="1" />
@@ -2464,6 +2468,31 @@
     <path name="unprocessed-mic">
         <path name="unprocessed-handset-mic" />
     </path>
+
+    <!-- USB TTY start -->
+
+    <!-- full: both end tty -->
+    <path name="voice-tty-full-usb">
+        <ctl name="TTY Mode" value="FULL" />
+        <path name="usb-headphones" />
+    </path>
+
+    <path name="voice-tty-full-usb-mic">
+        <path name="usb-headset-mic" />
+    </path>
+
+    <!-- vco, in: handset mic use existing, out: tty -->
+    <path name="voice-tty-vco-usb">
+        <ctl name="TTY Mode" value="VCO" />
+        <path name="usb-headphones" />
+    </path>
+
+    <!-- hco, in: tty, out: speaker, use existing handset -->
+    <path name="voice-tty-hco-usb-mic">
+        <path name="voice-tty-full-usb-mic" />
+    </path>
+
+    <!-- USB TTY end   -->
 
     <!-- Added for ADSP testfwk -->
     <path name="ADSP testfwk">
