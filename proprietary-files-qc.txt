@@ -271,10 +271,6 @@ vendor/lib64/libuiblur.so
 vendor/lib/hw/keystore.msm8998.so
 vendor/lib64/hw/keystore.msm8998.so
 
-# Listen
-vendor/lib/hw/sound_trigger.primary.msm8998.so
-vendor/lib/libsmwrapper.so
-
 # Media
 -vendor/lib/libgpustats.so
 -vendor/lib64/libgpustats.so
