@@ -365,6 +365,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libshims_system_properties
 
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0-impl \
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service \
