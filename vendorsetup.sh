@@ -1,1 +1,1 @@
-add_lunch_combo aicp_angler-userdebug
+add_lunch_combo aicp_cheeseburger-userdebug
