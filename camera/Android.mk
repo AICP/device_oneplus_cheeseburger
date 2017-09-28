@@ -1,4 +1,4 @@
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2016 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,27 +21,4 @@ LOCAL_MODULE := libcamera_shim
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_32_BIT_ONLY := true
-
-include $(BUILD_SHARED_LIBRARY)
-
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES := DisplayEventReceiver.c
-LOCAL_MODULE := libcamera_shim_display
-LOCAL_MODULE_TAGS := optional
-include $(BUILD_SHARED_LIBRARY)
-
-# Camera
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES := GraphicBuffer.cpp
-LOCAL_SHARED_LIBRARIES := libui
-LOCAL_MODULE := libcamera_shim_buffer
-LOCAL_MODULE_TAGS := optional
-include $(BUILD_SHARED_LIBRARY)
-
-# Camera
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES := GraphicBufferSmall.cpp
-LOCAL_SHARED_LIBRARIES := libui
-LOCAL_MODULE := libcamera_shim_native
-LOCAL_MODULE_TAGS := optional
 include $(BUILD_SHARED_LIBRARY)
