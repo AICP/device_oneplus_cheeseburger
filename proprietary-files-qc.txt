@@ -310,7 +310,7 @@ bin/energy-awareness
 bin/msm_irqbalance
 
 # QCOM post_boot
-etc/init.qcom.post_boot.sh
+#etc/init.qcom.post_boot.sh
 
 # Peripheral manager
 bin/pm-proxy
