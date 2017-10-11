@@ -111,7 +111,7 @@ drm.service.enabled=true
 ro.frp.pst=/dev/block/bootdevice/by-name/config
 
 # Graphics
-ro.sf.lcd_density=480
+ro.sf.lcd_density=420
 debug.sf.hw=1
 debug.sf.latch_unsignaled=1
 debug.gralloc.enable_fb_ubwc=1
