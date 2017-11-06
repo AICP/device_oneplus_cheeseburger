@@ -119,10 +119,9 @@
              8 - Assistant (search)
             16 - App switch
             32 - Camera
-            64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
-    <!--<integer name="config_deviceHardwareKeys">83</integer>-->
+    <integer name="config_deviceHardwareKeys">23</integer>
 
     <!-- Hardware keys present on the device with the ability to wake, stored as a bit field.
          This integer should equal the sum of the corresponding value for each
@@ -160,7 +159,7 @@
          This needs to match the constants in
          policy/src/com/android/internal/policy/impl/PhoneWindowManager.java
     -->
-    <!--<integer name="config_longPressOnAppSwitchBehavior">1</integer>-->
+    <integer name="config_longPressOnAppSwitchBehavior">1</integer>
 
     <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
     <bool translatable="false" name="config_wifi_dual_band_support">true</bool>
