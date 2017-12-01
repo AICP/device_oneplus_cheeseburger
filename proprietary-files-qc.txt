@@ -264,6 +264,7 @@ vendor/lib64/libsdm-color.so
 vendor/lib64/libsdm-diag.so
 -vendor/lib64/libsdm-disp-apis.so
 vendor/lib64/libsdmextension.so
+vendor/lib64/libtinyxml2_1.so
 vendor/lib64/libuiblur.so
 
 # Keystore
@@ -309,9 +310,6 @@ vendor/lib64/libQtiTether.so
 bin/energy-awareness
 bin/msm_irqbalance
 
-# QCOM post_boot
-#etc/init.qcom.post_boot.sh
-
 # Peripheral manager
 bin/pm-proxy
 bin/pm-service
@@ -324,6 +322,9 @@ framework/com.qti.snapdragon.sdk.display.jar
 -vendor/app/colorservice/colorservice.apk
 vendor/bin/mm-pp-dpps
 vendor/lib64/libdisp-aba.so
+
+# QCOM post_boot
+#etc/init.qcom.post_boot.sh
 
 # QMI
 bin/irsc_util
