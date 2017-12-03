@@ -95,6 +95,12 @@ on post-fs
     # Initialize IPA for rmnet
     write /dev/ipa 1
 
+    #davidliu@bsp 2017/04/14 Add OTG switch
+    on property:persist.sys.oem.otg_support=true
+      write /sys/class/power_supply/usb/otg_switch 1
+    on property:persist.sys.oem.otg_support=false
+      write /sys/class/power_supply/usb/otg_switch 0
+
 on post-fs-data
     mkdir /data/tombstones/modem 0771 system system
     mkdir /data/tombstones/lpass 0771 system system
