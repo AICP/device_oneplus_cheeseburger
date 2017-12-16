@@ -150,6 +150,8 @@ vendor/lib64/libjni_makeupV2.so
 vendor/lib64/libjni_panorama.so
 vendor/lib64/libjni_ubifocus.so
 vendor/lib64/libjni_blurbuster.so
+vendor/lib64/libts_detected_face_jni.so
+vendor/lib64/libts_face_beautify_jni.so
 vendor/lib64/libjni_stillmore.so
 vendor/lib64/libjni_clearsight.so
 vendor/lib64/libjni_sharpshooter.so
@@ -252,8 +254,6 @@ lib/libmms_gyro_vstab_auth.so
 lib/libmms_gyro_vstab.so
 lib/libmms_hal_vstab.so
 lib/libmms_warper_vstab.so
-lib/libmorpho_image_stab4.so
-lib/libmorpho_video_refiner.so
 lib/libopbaselib.so
 lib/libopcamera_crypt.so
 lib/libopcamera_native_modules.so
@@ -267,8 +267,6 @@ lib64/libopcameralib.so
 
 # Camera / DSP - Hexagon libraries
 lib/rfsa/adsp/libVDHexagonBlurless_skel.so
-lib/rfsa/adsp/libmorpho_image_stabilizer4_hvx_skel.so
-lib/rfsa/adsp/libmorpho_video_denoiser_hvx_skel.so
 
 # Camera firmware
 etc/firmware/cpp_firmware_v1_1_1.fw
