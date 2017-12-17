@@ -1,0 +1,26 @@
+Copyright (C) 2017 The AICP Project
+
+Device configuration for OnePlus 5
+==================================
+
+The OnePlus A5000 (codenamed _"cheeseburger"_) is a high-end smartphone from OnePlus Ltd.
+
+It was announced in June 2017. Release date was July 2017.
+
+## Device specifications
+
+Basic   | Spec Sheet
+-------:|:-------------------------
+CPU     | Octa-core (4x2.45 GHz Kryo & 4x1.9 GHz Kryo)
+Chipset | Qualcomm MSM8998 Snapdragon 835
+GPU     | Adreno 540
+Memory  | 6/8 GB RAM
+Shipped Android Version | 7.1.1
+Storage | 64/128 GB
+Battery | Li-Po 3300 mAh battery
+Display | 1080 x 1920 pixels, 5.5 inches (~401 ppi pixel density)
+Camera  | Back: 20 MP (dual camera), f/2.6; Front: 16 MP, f/1.7, phase detection autofocus, dual-LED (dual tone) flash
+
+## Device picture
+
+![OnePlus A5000](https://i-cdn.phonearena.com/images/phones/67908-xlarge/OnePlus-5-0.jpg "OnePlus 5 in black")
