@@ -1,26 +1,26 @@
-Copyright (C) 2017 The AICP Project
-
 Device configuration for OnePlus 5
 ==================================
 
-The OnePlus A5000 (codenamed _"cheeseburger"_) is a high-end smartphone from OnePlus Ltd.
+The OnePlus 5 (codenamed _"cheeseburger"_) is a high-end smartphone from OnePlus Ltd.
 
-It was announced in June 2017. Release date was July 2017.
+OnePlus 5 aka A5000 was announced and released in June 2017.
 
 ## Device specifications
 
-Basic   | Spec Sheet
--------:|:-------------------------
-CPU     | Octa-core (4x2.45 GHz Kryo & 4x1.9 GHz Kryo)
-Chipset | Qualcomm MSM8998 Snapdragon 835
-GPU     | Adreno 540
-Memory  | 6/8 GB RAM
-Shipped Android Version | 7.1.1
-Storage | 64/128 GB
-Battery | Li-Po 3300 mAh battery
-Display | 1080 x 1920 pixels, 5.5 inches (~401 ppi pixel density)
-Camera  | Back: 20 MP (dual camera), f/2.6; Front: 16 MP, f/1.7, phase detection autofocus, dual-LED (dual tone) flash
+| Device       | OnePlus 5 (A5000)                                      |
+| -----------: | :---------------------------------------------- |
+| SoC          | Qualcomm MSM8998 Snapdragon 835                 |
+| CPU          | Quad-core 2.45GHz Kryo & quad-core 1.9GHz Kryo  |
+| GPU          | 710MHz Adreno 540                               |
+| Memory       | 6GB / 8GM RAM (LPDDR4X)                         |
+| Shipped Android version | 7.1.1                                |
+| Storage      | 64GB / 128GB (UFS 2.1 2-LANE Flash)             |
+| Battery      | Non-removable Li-Po 3300 mAh                    |
+| Dimensions   | 152.7 x 74.1 x 7.25 mm                          |
+| Display      | 1920 x 1080 px, 5.5 inches (401 PPI)            |
+| Rear camera  | 16 MPx, f/1.7, 24mm, DCAF autofocus + 20 MPx, f/2.6, 36mm, PDAF autofocus |
+| Front camera | 16 MPx, f/2.0                                   |
 
 ## Device picture
 
-![OnePlus A5000](https://i-cdn.phonearena.com/images/phones/67908-xlarge/OnePlus-5-0.jpg "OnePlus 5 in black")
+![OnePlus 5](http://image01.oneplus.cn/ebp/201706/17/291/8dc3e3d2bd22658de5f63eeb27700a83.png "OnePlus 5 in black")
