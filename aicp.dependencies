@@ -10,9 +10,9 @@
     "branch":      "cm-14.1"
   },
   {
-    "repository":  "Mokee/android_vendor_oneplus_cheeseburger",
-    "target_path": "vendor/oneplus/cheeseburger",
-    "branch":      "mkn-mr1"
+    "repository":  "TheMuppets/proprietary_vendor_oneplus",
+    "target_path": "vendor/oneplus",
+    "branch":      "cm-14.1"
   },
   {
     "repository":  "LineageOS/android_vendor_nxp-nfc_opensource_frameworks",
