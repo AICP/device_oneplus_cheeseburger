@@ -37,7 +37,7 @@ TARGET_VENDOR_DEVICE_NAME := OnePlus5
 
 # AICP Device Maintainers
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    DEVICE_MAINTAINERS="Darragh McGee (DarkExistence), Erwan Leboucher (geneisxx), SpiritCroc"
+    DEVICE_MAINTAINERS="Erwan Leboucher (genesixxbf3), Carlos Solano (csolanol)"
 
 PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=OnePlus5 PRODUCT_NAME=OnePlus5
 
