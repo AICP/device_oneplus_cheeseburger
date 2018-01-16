@@ -66,5 +66,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
 # Inherit from oneplus msm8998-common
 $(call inherit-product, device/oneplus/msm8998-common/common.mk)
