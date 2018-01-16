@@ -2,17 +2,5 @@
 # so we pull the patches from gerrit.
 #
 198050 https://review.lineageos.org packages/apps/Nfc
-198303 https://review.lineageos.org device/qcom/sepolicy
-198620 https://review.lineageos.org device/qcom/sepolicy
-198707 https://review.lineageos.org device/qcom/sepolicy
-199557 https://review.lineageos.org device/qcom/sepolicy
-199558 https://review.lineageos.org device/qcom/sepolicy
-199559 https://review.lineageos.org device/qcom/sepolicy
-199560 https://review.lineageos.org device/qcom/sepolicy
-199562 https://review.lineageos.org device/qcom/sepolicy
-199564 https://review.lineageos.org device/qcom/sepolicy
-199565 https://review.lineageos.org device/qcom/sepolicy
-199554 https://review.lineageos.org device/qcom/sepolicy
-199600 https://review.lineageos.org device/qcom/sepolicy
-200035 https://review.lineageos.org frameworks/av
 200040 https://review.lineageos.org hardware/interfaces
+57556 https://gerrit.aicp-rom.com frameworks/av
