@@ -3,3 +3,6 @@
 #
 198050 https://review.lineageos.org packages/apps/Nfc
 200040 https://review.lineageos.org hardware/interfaces
+# button backlight settings
+57517 https://gerrit.aicp-rom.com packages/apps/LineageParts
+57520 https://gerrit.aicp-rom.com frameworks/base
