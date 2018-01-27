@@ -3,8 +3,5 @@
 #
 198050 https://review.lineageos.org packages/apps/Nfc
 200040 https://review.lineageos.org hardware/interfaces
-# button backlight settings
-57517 http://gerrit.aicp-rom.com packages/apps/LineageParts
-57520 http://gerrit.aicp-rom.com frameworks/base
 # fix for ims-experiments
 58660 http://gerrit.aicp-rom.com frameworks/opt/telephony
