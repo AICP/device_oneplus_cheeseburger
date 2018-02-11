@@ -1,9 +1,8 @@
 # We cant wait for all the patches be merged
 # so we pull the patches from gerrit.
 #
-198050 https://review.lineageos.org packages/apps/Nfc
 200040 https://review.lineageos.org hardware/interfaces
 # fix for ims-experiments
-58660 http://gerrit.aicp-rom.com frameworks/opt/telephony
+#58660 http://gerrit.aicp-rom.com frameworks/opt/telephony
 # Snap use api v2
 59008 http://gerrit.aicp-rom.com device/oneplus/msm8998-common
