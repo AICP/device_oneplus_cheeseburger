@@ -2,3 +2,5 @@
 # so we pull the patches from gerrit.
 #
 200040 https://review.lineageos.org hardware/interfaces
+206452 https://review.lineageos.org frameworks/native
+203295 https://review.lineageos.org device/oneplus/msm8998-common
