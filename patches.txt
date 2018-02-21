@@ -2,9 +2,9 @@
 # so we pull the patches from gerrit.
 #
 # Camed HAL extension: Added support in HIDL for Extended FD
-206129 https://review.lineageos.org hardware/interfaces
+#206129 https://review.lineageos.org hardware/interfaces
 # Camera: CameraHardwareInterface changes to support Extended FD
-206130 https://review.lineageos.org frameworks/av
+#206130 https://review.lineageos.org frameworks/av
 # surfaceflinger: set a prop when initialization is complete
 206452 https://review.lineageos.org frameworks/native
 # msm8998: Wait for sf to init fully before starting hwcomposer
