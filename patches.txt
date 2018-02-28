@@ -6,6 +6,6 @@
 # Camera: CameraHardwareInterface changes to support Extended FD
 #206130 https://review.lineageos.org frameworks/av
 # surfaceflinger: set a prop when initialization is complete
-#206452 https://review.lineageos.org frameworks/native
+206452 https://review.lineageos.org frameworks/native
 # msm8998: Wait for sf to init fully before starting hwcomposer
-#203295 https://review.lineageos.org device/oneplus/msm8998-common
+203295 https://review.lineageos.org device/oneplus/msm8998-common
