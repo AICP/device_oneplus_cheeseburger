@@ -5,19 +5,3 @@
 206452 https://review.lineageos.org frameworks/native
 # msm8998: Wait for sf to init fully before starting hwcomposer
 203295 https://review.lineageos.org device/oneplus/msm8998-common
-# qcom-cam topic
-62333 http://gerrit.aicp-rom.com hardware/interfaces
-62335 http://gerrit.aicp-rom.com hardware/interfaces
-62337 http://gerrit.aicp-rom.com framewoks/av
-62339 http://gerrit.aicp-rom.com vendor/aicp
-# f_av o-mr1-camera-fixes topic
-63113 http://gerrit.aicp-rom.com frameworks/av
-63116 http://gerrit.aicp-rom.com frameworks/av
-63119 http://gerrit.aicp-rom.com frameworks/av
-63122 http://gerrit.aicp-rom.com frameworks/av
-63125 http://gerrit.aicp-rom.com frameworks/av
-63128 http://gerrit.aicp-rom.com frameworks/av
-63131 http://gerrit.aicp-rom.com frameworks/av
-63134 http://gerrit.aicp-rom.com frameworks/av
-63137 http://gerrit.aicp-rom.com frameworks/av
-63143 http://gerrit.aicp-rom.com frameworks/av
