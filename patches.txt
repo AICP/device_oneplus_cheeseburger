@@ -5,3 +5,5 @@
 206452 https://review.lineageos.org frameworks/native
 # msm8998: Wait for sf to init fully before starting hwcomposer
 203295 https://review.lineageos.org device/oneplus/msm8998-common
+# Camera: Expose Aux camera to apps present in the whitelist
+209125 https://review.lineageos.org frameworks/base
