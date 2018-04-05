@@ -1,7 +1,3 @@
 # We cant wait for all the patches be merged
 # so we pull the patches from gerrit.
 #
-# surfaceflinger: set a prop when initialization is complete
-206452 https://review.lineageos.org frameworks/native
-# msm8998: Wait for sf to init fully before starting hwcomposer
-203295 https://review.lineageos.org device/oneplus/msm8998-common
