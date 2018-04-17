@@ -1,5 +1,3 @@
-DEVICE_PROVISIONED=1
-
 # Hardware Info
 ro.device.chipset=Qualcomm MSM8998 Snapdragon 835
 ro.device.cpu=Octa-core (4x2.45 GHz Kryo & 4x1.9 GHz Kryo)
