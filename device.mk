@@ -13,7 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
 #
 # This file sets variables that control the way modules are built
 # thorughout the system. It should not be used to conditionally
@@ -30,30 +29,6 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-# Dalvik
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapstartsize=16m \
-    dalvik.vm.heapgrowthlimit=256m \
-    dalvik.vm.heapsize=512m \
-    dalvik.vm.heaptargetutilization=0.75 \
-    dalvik.vm.heapminfree=4m \
-    dalvik.vm.heapmaxfree=8m
-
-# HWUI
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hwui.texture_cache_size=96 \
-    ro.hwui.layer_cache_size=64 \
-    ro.hwui.r_buffer_cache_size=12 \
-    ro.hwui.path_cache_size=39 \
-    ro.hwui.gradient_cache_size=1 \
-    ro.hwui.drop_shadow_cache_size=7 \
-    ro.hwui.texture_cache_flushrate=0.4 \
-    ro.hwui.text_small_cache_width=2048 \
-    ro.hwui.text_small_cache_height=2048 \
-    ro.hwui.text_large_cache_width=3072 \
-    ro.hwui.text_large_cache_height=4096
->>>>>>> e642a96... cheeseburger: remove redundant bootanim scale enteries
 
 # Audio
 PRODUCT_COPY_FILES += \
