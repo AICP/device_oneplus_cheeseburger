@@ -1,4 +1,5 @@
 # We cant wait for all the patches be merged
 # so we pull the patches from gerrit.
 #
-66419/1 http://gerrit.aicp-rom.com prebuilts/clang/host/linux-x86
+#66419/1 http://gerrit.aicp-rom.com prebuilts/clang/host/linux-x86
+67313/1 http://gerrit.aicp-rom.com prebuilts/clang/host/linux-x86
