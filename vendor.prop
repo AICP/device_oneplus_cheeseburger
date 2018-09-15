@@ -1,7 +1,0 @@
-# Hardware Info
-ro.device.chipset=Qualcomm MSM8998 Snapdragon 835
-ro.device.cpu=Octa-core (4x2.45 GHz Kryo & 4x1.9 GHz Kryo)
-ro.device.front_cam=16 MP, f/2.0, 20mm, EIS (gyro), 1.0 µm pixel size, 1080p, Auto HDR
-ro.device.gpu=Adreno 540
-ro.device.rear_cam=Dual 16 MP, f/1.7, 24mm, EIS (gyro) + 20 MP, f/2.6, 36mm, 1.6x optical zoom
-ro.device.screen_res=1080 x 1920 pixels (~401 ppi pixel density)
