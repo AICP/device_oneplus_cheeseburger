@@ -1,0 +1,7 @@
+[
+  {
+    "repository":  "AICP/device_oneplus_msm8998-common",
+    "target_path": "device/oneplus/msm8998-common",
+    "branch":      "p9.0"
+  }
+]
