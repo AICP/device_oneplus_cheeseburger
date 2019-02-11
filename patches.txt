@@ -2,5 +2,4 @@
 # so we pull the patches from gerrit.
 #
 #e.g. 67313/1 http://gerrit.aicp-rom.com prebuilts/clang/host/linux-x86
-83579/1 http://gerrit.aicp-rom.com prebuilts/clang/host/linux-x86
-83582/1 http://gerrit.aicp-rom.com prebuilts/clang/host/linux-x86
+84965/1 http://gerrit.aicp-rom.com prebuilts/clang/host/linux-x86
