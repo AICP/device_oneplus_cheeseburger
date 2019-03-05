@@ -28,7 +28,7 @@
 DEVICE_PATH := device/oneplus/cheeseburger
 
 # Assertions
-TARGET_OTA_ASSERT_DEVICE := cheeseburger
+TARGET_OTA_ASSERT_DEVICE := cheeseburger,OnePlus5
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
