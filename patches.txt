@@ -2,3 +2,5 @@
 # so we pull the patches from gerrit.
 #
 #e.g. 67313/1 http://gerrit.aicp-rom.com prebuilts/clang/host/linux-x86
+88727/1 http://gerrit.aicp-rom.com  system/netd -f
+88736/1 http://gerrit.aicp-rom.com  system/netd -f
