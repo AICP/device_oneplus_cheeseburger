@@ -45,5 +45,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.cheeseburger
 
+# RRO (Runtime Resource Overlay)
+PRODUCT_ENFORCE_RRO_TARGETS := *
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += $(LOCAL_PATH)/overlay/lineage-sdk
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += device/oneplus/msm8998-common/overlay/lineage-sdk
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += device/oneplus/msm8998-common/overlay/packages/apps/Snap
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += device/oppo/common/overlay/lineage-sdk
+
 # Inherit from oneplus msm8998-common
 $(call inherit-product, device/oneplus/msm8998-common/common.mk)
