@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ca9b4fd1_b53ba31c",
+        "filename": "patches.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1375
+      },
+      "writtenOn": "2020-02-28T18:37:56Z",
+      "side": 1,
+      "message": "true not -f",
+      "revId": "8f80b57399b2dc05c53e6c7810de926ac97b2938",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": true
+    }
+  ]
+}
