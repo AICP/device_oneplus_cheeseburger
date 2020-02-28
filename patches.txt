@@ -3,7 +3,7 @@
 #
 #e.g. 67313/1 http://gerrit.aicp-rom.com prebuilts/clang/host/linux-x86
 # clang 10.0.4
-1235378/1 https://android-review.googlesource.com prebuilts/clang/host/linux-x86
+1235378/1 https://android-review.googlesource.com prebuilts/clang/host/linux-x86 true
 # hardware_interfaces (fix WiFi hotspot)
 98544/1 http://gerrit.aicp-rom.com hardware/interfaces
 98545/1 http://gerrit.aicp-rom.com hardware/interfaces
