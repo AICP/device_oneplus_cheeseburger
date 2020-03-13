@@ -37,7 +37,5 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
 # Lineage Hardware
 JAVA_SOURCE_OVERLAYS += org.lineageos.hardware|$(DEVICE_PATH)/lineagehw|**/*.java
 
-AICP_EXEC_PRE_SCRIPT := true
-
 # inherit from the proprietary version
 -include vendor/oneplus/cheeseburger/BoardConfigVendor.mk
