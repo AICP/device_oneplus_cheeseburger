@@ -1,2 +1,2 @@
-require version-modem=2020-03-16 12:06:35
-require version-firmware=9.0.11
+require version-modem=2020-04-07 22:34:47
+require version-firmware=Hydrogen-056
