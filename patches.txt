@@ -2,8 +2,3 @@
 # so we pull the patches from gerrit.
 #
 #e.g. 67313/1 http://gerrit.aicp-rom.com prebuilts/clang/host/linux-x86
-# hardware_interfaces (fix WiFi hotspot)
-98544/1 http://gerrit.aicp-rom.com hardware/interfaces
-98545/1 http://gerrit.aicp-rom.com hardware/interfaces
-98546/1 http://gerrit.aicp-rom.com hardware/interfaces
-98547/1 http://gerrit.aicp-rom.com hardware/interfaces
