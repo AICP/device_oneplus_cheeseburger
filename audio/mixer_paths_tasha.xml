@@ -568,6 +568,10 @@
     <ctl name="MultiMedia8 Mixer SLIM_0_TX" value="0" />
     <ctl name="MultiMedia8 Mixer SLIM_7_TX" value="0" />
     <ctl name="MultiMedia8 Mixer AFE_PCM_TX" value="0" />
+    <ctl name="MultiMedia10 Mixer SLIM_0_TX" value="0" />
+    <ctl name="MultiMedia10 Mixer SLIM_1_TX" value="0" />
+    <ctl name="MultiMedia10 Mixer USB_AUDIO_TX" value="0" />
+    <ctl name="MultiMedia10 Mixer SLIM_7_TX" value="0" />
     <!-- audio record compress end-->
     <!-- listen -->
     <ctl name="LSM1 MUX" value="None" />
@@ -1694,6 +1698,27 @@
 
     <path name="audio-record-compress usb-headset-mic">
         <ctl name="MultiMedia8 Mixer USB_AUDIO_TX" value="1" />
+    </path>
+
+    <!-- VoIP Tx settings -->
+    <path name="audio-record-voip">
+        <ctl name="MultiMedia10 Mixer SLIM_0_TX" value="1" />
+    </path>
+
+    <path name="audio-record-voip headset-mic">
+        <ctl name="MultiMedia10 Mixer SLIM_1_TX" value="1" />
+    </path>
+
+    <path name="audio-record-voip usb-headset-mic">
+        <ctl name="MultiMedia10 Mixer USB_AUDIO_TX" value="1" />
+    </path>
+
+    <path name="audio-record-voip bt-sco">
+        <ctl name="MultiMedia10 Mixer SLIM_7_TX" value="1" />
+    </path>
+
+    <path name="audio-record-voip bt-sco-wb">
+        <path name="audio-record-voip bt-sco" />
     </path>
 
     <path name="low-latency-record">
