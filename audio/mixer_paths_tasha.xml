@@ -648,6 +648,10 @@
         <ctl name="AUDIO_REF_EC_UL1 MUX" value="SLIM_RX" />
     </path>
 
+    <path name="echo-reference handset">
+        <ctl name="AUDIO_REF_EC_UL1 MUX" value="SLIM_RX" />
+    </path>
+
     <path name="echo-reference-skype quat_i2s">
          <ctl name="AUDIO_REF_EC_UL8 MUX" value="QUAT_MI2S_TX" />
     </path>
@@ -973,7 +977,7 @@
 
     <path name="compress-offload-playback speaker-and-headphones">
         <path name="compress-offload-playback headphones" />
-        <path name="compress-offload-playback" />
+        <path name="compress-offload-playback quat_i2s" />
     </path>
 
     <path name="compress-offload-playback speaker-and-bt-sco">
@@ -3160,22 +3164,6 @@
 
     <path name="unprocessed-mic">
         <path name="unprocessed-handset-mic" />
-    </path>
-
-    <path name="unprocessed-stereo-mic">
-        <path name="voice-rec-dmic-ef" />
-    </path>
-
-    <path name="unprocessed-three-mic">
-        <path name="three-mic" />
-    </path>
-
-    <path name="unprocessed-quad-mic">
-        <path name="quad-mic" />
-    </path>
-
-    <path name="unprocessed-headset-mic">
-        <path name="headset-mic" />
     </path>
 
     <!-- Added for ADSP testfwk -->
