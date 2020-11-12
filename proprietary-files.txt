@@ -11,6 +11,12 @@ vendor/etc/acdbdata/adsp_avs_config.acdb
 
 # Camera
 vendor/etc/camera/imx398_chromatix.xml
+vendor/lib64/libDeVIS.so
+vendor/lib64/libEIS.so
+vendor/lib64/libOGLManager.so
+vendor/lib/libDeVIS.so
+vendor/lib/libEIS.so
+vendor/lib/libOGLManager.so
 vendor/lib/libchromatix_imx371_cpp_640x480_30fps_video.so
 vendor/lib/libchromatix_imx398_3a_3264x2448_24fps_preview_bokeh.so
 vendor/lib/libchromatix_imx398_3a_wechat_preview.so
