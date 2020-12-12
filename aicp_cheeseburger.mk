@@ -46,3 +46,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 BUILD_FINGERPRINT := OnePlus/OnePlus5/OnePlus5:8.1.0/OPM1.171019.011/04110400:user/release-keys
 
 TARGET_VENDOR := oneplus
+
+# For Face Unlock
+TARGET_ARCH := arm64
