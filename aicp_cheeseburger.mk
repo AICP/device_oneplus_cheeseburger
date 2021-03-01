@@ -53,3 +53,6 @@ TARGET_VENDOR := oneplus
 
 # For Face Unlock
 TARGET_ARCH := arm64
+
+PRODUCT_OVERRIDE_INFO := true
+PRODUCT_OVERRIDE_FINGERPRINT := OnePlus/OnePlus5/OnePlus5:8.1.0/OPM1.171019.011/04110400:user/release-keys
