@@ -43,7 +43,9 @@ PRODUCT_COPY_FILES += \
 
 # RRO (Runtime Resource Overlay)
 PRODUCT_ENFORCE_RRO_TARGETS := *
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += device/oneplus/msm8998-common/overlay/packages/apps/Snap
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    device/oneplus/msm8998-common/overlay/packages/apps/Snap \
+    device/oneplus/msm8998-common/overlay/packages/apps/PartsBin
 
 # Inherit from oneplus msm8998-common
 $(call inherit-product, device/oneplus/msm8998-common/common.mk)
