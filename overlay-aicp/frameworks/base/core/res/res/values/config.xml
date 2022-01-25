@@ -31,4 +31,5 @@
          config to 7. -->
     <integer name="config_deviceHardwareKeys">83</integer>
 
+    <bool name="config_audioPanelOnLeftSide">true</bool>
 </resources>
