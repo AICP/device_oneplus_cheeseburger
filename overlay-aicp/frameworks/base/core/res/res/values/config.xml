@@ -32,4 +32,7 @@
     <integer name="config_deviceHardwareKeys">83</integer>
 
     <bool name="config_audioPanelOnLeftSide">true</bool>
+
+    <!-- Support long press power for torch -->
+    <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
 </resources>
