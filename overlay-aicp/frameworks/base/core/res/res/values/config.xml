@@ -41,4 +41,13 @@
 
     <!-- Does the device multi color battery LED? -->
     <bool name="config_multiColorBatteryLed">true</bool>
+
+    <!-- Does device support ringtone focus functionality -->
+    <bool name="config_deviceRingtoneFocusMode">true</bool>
+
+    <!-- Does device support power + vol down gesture -->
+    <bool name="config_volumeHushGestureEnabled">true</bool>
+
+    <!-- Does device support long press power for launching assistant -->
+    <bool name="config_longPressOnPowerForAssistantSettingAvailable">false</bool>
 </resources>
