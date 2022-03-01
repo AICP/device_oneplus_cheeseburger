@@ -50,4 +50,11 @@
 
     <!-- Does device support long press power for launching assistant -->
     <bool name="config_longPressOnPowerForAssistantSettingAvailable">false</bool>
+
+    <!-- Control the behavior when the user presses the power and volume up buttons together.
+            0 - Nothing
+            1 - Mute toggle
+            2 - Global actions menu
+    -->
+    <integer name="config_keyChordPowerVolumeUp">1</integer>
 </resources>
